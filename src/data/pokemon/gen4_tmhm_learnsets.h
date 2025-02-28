@@ -1458,8 +1458,6 @@ static const u32 sGen4TMHMLearnsets[][2] =
                                         | G4TMHM(TM090_SUBSTITUTE)),
 
   [SPECIES_RHYDON] = G4TMHM_LEARNSET(G4TMHM(TM052_FOCUS_BLAST)
-                                        | G4TMHM(TM080_ROCK_SLIDE)
-                                        | G4TMHM(TM075_SWORDS_DANCE)
                                         | G4TMHM(TM056_FLING)
                                         | G4TMHM(TM058_ENDURE)
                                         | G4TMHM(TM059_DRAGON_PULSE)
@@ -5073,6 +5071,8 @@ static const u32 sGen4TMHMLearnsets[][2] =
                                         | G4TMHM(TM091_FLASH_CANNON)),
 
   [SPECIES_RHYPERIOR] = G4TMHM_LEARNSET(G4TMHM(TM052_FOCUS_BLAST)
+                                        | G4TMHM(TM080_ROCK_SLIDE)
+                                        | G4TMHM(TM075_SWORDS_DANCE)
                                         | G4TMHM(TM056_FLING)
                                         | G4TMHM(TM058_ENDURE)
                                         | G4TMHM(TM059_DRAGON_PULSE)
