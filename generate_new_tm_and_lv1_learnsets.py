@@ -529,7 +529,7 @@ with open('filtered_learnsets.ts','r') as in_file:
       new_tm_ls[mon].add(move)
     elif move not in old_tms_l2u and (('"4M' not in line) or regexp.search(line)):
       lv1_ls[mon].add(move)
-    if move == 'defog' or (('"4T' in line or '"4E' in line) and (move in old_tms_l2u)):
+    if move == 'defog' or (('"4T' in line or '"4E' in line or '"4M' in line) and (move in old_tms_l2u)):
       if mon not in missing_old_tms:
         missing_old_tms[mon] = []
       missing_old_tms[mon].append(move)
