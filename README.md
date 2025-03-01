@@ -87,7 +87,7 @@ Other changes:
 A 7 level band is in place. A portion of the player's team must be within 7 levels, inclusive, of each other;
 e.g. a range of 30-37 is valid but 30-38 isn’t. The number of Pokémon that must be within the band is equal
 to the number of badges the player has plus 1, _with a maximum cutoff of 5_. For example, the player has 3 badges,
-they must have 4 Pokémon within 7 levels (inclusive) of each other. The fact that the 6th Pokémon isn't taken into 
+they must have 4 Pokémon within 7 levels (inclusive) of each other. The fact that the 6th Pokémon isn't taken into
 account means that 1 low level Pokémon can be safely carried around for HM use, Pickup, etc.
 
 Rare candies do not work on Pokémon that are at the level cap.
@@ -200,6 +200,8 @@ replacement mappings. Note that this is a term specific to this ROM-hack, and is
 different than the "map group" concept in the FR/LG source code.
 
 The list of map sets is below. Any map that isn't in this list is in its own map set:
+
+##### Dungeons:
 - Mt. Moon 1F, B1F, B2F
 - Rock Tunnel 1F, B1F
 - Diglett's Cave North Entrace, South Entrance, B1F
@@ -211,6 +213,12 @@ The list of map sets is below. Any map that isn't in this list is in its own map
 - Seafoam Islands B3F, B4F
 - Victory Road 1F, 2F, 3F
 - Mt. Ember Summit Path 1F, 2F, 3F
+
+##### Water routes:
+- Pallet Town, Route 20, Cinnabar Island
+- Vermilion City, Route 11
+- Route 12, Route 13
+- Route 19, Route 20
 
 #### Early boost
 
