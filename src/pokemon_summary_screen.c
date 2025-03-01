@@ -38,6 +38,7 @@
 
 const u8 sPhysStr[] =_("\nphys");
 const u8 sSpecStr[] =_("\nspec");
+const u8 sSpace[] =_(" ");
 const u8 sSpaces[] =_("      ");
 u8 sHiddenPowerType;
 
@@ -173,7 +174,7 @@ struct PokemonSummaryScreenData
         u8 ALIGNED(4) otNameStrBufs[2][12];
 
         u8 ALIGNED(4) dexNumStrBuf[5];
-        u8 ALIGNED(4) unk306C[7];
+        u8 ALIGNED(4) unk306C[15];
         u8 ALIGNED(4) itemNameStrBuf[ITEM_NAME_LENGTH + 1];
 
         u8 ALIGNED(4) genderSymbolStrBuf[3];
@@ -2164,12 +2165,16 @@ static void BufferMonInfo(void)
     dynamicMoveType |= F_DYNAMIC_TYPE_1 | F_DYNAMIC_TYPE_2;
     sHiddenPowerType = dynamicMoveType & DYNAMIC_TYPE_MASK;
 
-    GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_OT_NAME, tempStr);
     StringCopy(sMonSummaryScreen->summary.otNameStrBuf, sSpaces);
     ConvertIntToDecimalStringN(sMonSummaryScreen->summary.otNameStrBuf+6, dynamicBasePower, STR_CONV_MODE_LEADING_ZEROS, 2);
 
+    GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_OT_NAME, tempStr);
+    StringAppendN(tempStr, sSpace, 1);
+    StringCopyN_Multibyte(sMonSummaryScreen->summary.unk306C, tempStr, PLAYER_NAME_LENGTH + 1);
+
     otId = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_OT_ID) & 0xffff;
-    ConvertIntToDecimalStringN(sMonSummaryScreen->summary.unk306C, otId, STR_CONV_MODE_LEADING_ZEROS, 5);
+    ConvertIntToDecimalStringN(tempStr, otId, STR_CONV_MODE_LEADING_ZEROS, 5);
+    StringAppendN(sMonSummaryScreen->summary.unk306C, tempStr, 5);
 
     ConvertIntToDecimalStringN(tempStr, GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_LEVEL), STR_CONV_MODE_LEFT_ALIGN, 3);
     StringCopy(sMonSummaryScreen->summary.levelStrBuf, gText_Lv);
