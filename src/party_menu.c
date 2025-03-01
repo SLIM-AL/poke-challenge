@@ -483,7 +483,7 @@ u8 CheckLevelCap(u8 level) {
   u8 monsInRange = 0;
   u8 monsInNextRange = 0;
 
-  const u8 levelBandRange = 7;
+  const u8 levelBandRange = 6;
 
   u8 requiredMonsInRange = BadgeCount();
   if (requiredMonsInRange > 4) {
@@ -499,7 +499,7 @@ u8 CheckLevelCap(u8 level) {
         continue;
       }
     }
-    if (gPlayerParty[i].level >= (level-levelBandRange-1)) {
+    if (gPlayerParty[i].level >= (level+1-levelBandRange)) {
       monsInNextRange++;
     }
     if (gPlayerParty[i].level >= (level-levelBandRange)) {
@@ -5153,7 +5153,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc func)
     u32 level = GetMonData(mon, MON_DATA_LEVEL);
     u8 checkLevelCapResult = CheckLevelCap(level);
 
-    if (level != MAX_LEVEL && checkLevelCapResult != AT_CAP && checkLevelCapResult != ONE_AWAY_FROM_CAP)
+    if (level != MAX_LEVEL && checkLevelCapResult != AT_CAP)
         noEffect = PokemonItemUseNoEffect(mon, item, gPartyMenu.slotId, 0);
     else
         noEffect = TRUE;
