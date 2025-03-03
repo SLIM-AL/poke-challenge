@@ -899,6 +899,7 @@ Other changes:
  - Legendary birds give the player a Rare Candy upon defeat.
  - Elite Four members give the player a Rare Candy and Nature Mint upon defeat (first time only).
  - The Champion gives the player a Rare Candy, Nature Mint, and Ability Patch upon defeat (every time).
+ - The Karate Master gives the player a MACHO BRACE.
  - Overworld Pokémon (e.g. Snorlax, Articuno) can't be caught.
  - Physical/special split.
  - Pokémon that evolve above level 45 now evolve at level 45 instead.
