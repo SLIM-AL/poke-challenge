@@ -41,7 +41,7 @@ Other changes:
  - The Karate Master gives the player a MACHO BRACE.
  - Overworld Pokémon (e.g. Snorlax, Articuno) can't be caught.
  - Physical/special split.
- - Pokémon that evolve above level 45 now evolve at level 45 instead.
+ - Dragonair, Pupitar, and Shelgon evolve at level 50.
  - Gift Pokémon are replaced with Spinda.
  - Items aren't sellable.
  - HMs are deletable without the Move Deleter.
