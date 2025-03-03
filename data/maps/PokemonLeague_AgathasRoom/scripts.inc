@@ -86,7 +86,6 @@ PokemonLeague_AgathasRoom_EventScript_DefeatedAgatha::
   setvar VAR_ELITE_FOUR_MEMBERS_BEATEN 3
   giveitem ITEM_RARE_CANDY
   giveitem ITEM_NATURE_MINT
-  giveitem ITEM_ABILITY_PATCH
   goto PokemonLeague_AgathasRoom_EventScript_DefeatedAgathaAgain
 
 PokemonLeague_AgathasRoom_EventScript_DefeatedAgathaAgain::
