@@ -141,7 +141,6 @@ PokemonLeague_LancesRoom_EventScript_DefeatedLance::
   setvar VAR_ELITE_FOUR_MEMBERS_BEATEN 4
   giveitem ITEM_RARE_CANDY
   giveitem ITEM_NATURE_MINT
-  giveitem ITEM_ABILITY_PATCH
   goto PokemonLeague_LancesRoom_EventScript_DefeatedLanceAgain
 
 PokemonLeague_LancesRoom_EventScript_DefeatedLanceAgain::
