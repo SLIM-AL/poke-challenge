@@ -173,13 +173,10 @@ u16 GetSpeciesFromGroup(u16 species, u16 randInput) {
 
   // If this is a starter, just use the game hash.
   if ((group == gGroup_GrassStarter1) ||
-      (group == gGroup_GrassStarter2) ||
       (group == gGroup_GrassStarter3) ||
       (group == gGroup_FireStarter1) ||
-      (group == gGroup_FireStarter2) ||
       (group == gGroup_FireStarter3) ||
       (group == gGroup_WaterStarter1) ||
-      (group == gGroup_WaterStarter2) ||
       (group == gGroup_WaterStarter3)) {
     // Int divide by 3 to preserve evolution chain.
     //
