@@ -52,7 +52,9 @@ bool8 MaybeEndChallenge(void) {
     for (i = 0; i < 14; ++i) {
       if (FlagGet(FLAG_EXT1+i)) limit += (i/2)+1;
     }
-    if (limit >= 19) return FALSE;
+    if (gSaveBlock2Ptr->playTimeHours < limit || limit >= 19) {
+      return FALSE;
+    }
 
     PlaySE(SE_DING_DONG);
     FlagClear(FLAG_CHALLENGE_NOT_OVER);

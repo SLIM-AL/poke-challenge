@@ -807,7 +807,9 @@ static void Task_ControlsGuide_LoadPage(u8 taskId)
     u8 page2Or3 = sOakSpeechResources->currentPage - 1; // 0 if page 2, 1 if page 3
     if (sOakSpeechResources->currentPage == CONTROLS_GUIDE_PAGE_1)
     {
-        ControlsGuide_LoadPage1();
+        // ControlsGuide_LoadPage1();
+        gTasks[taskId].func = Task_PikachuIntro_LoadPage1;
+ 
     }
     else
     {
@@ -944,7 +946,7 @@ static void Task_PikachuIntro_LoadPage1(u8 taskId)
     }
     else
     {
-        PlayBGM(MUS_NEW_GAME_INTRO);
+        PlayBGM(MUS_UNION_ROOM);
         ClearTopBarWindow();
         TopBarWindowPrintString(gText_ABUTTONNext, 0, 1);
         sOakSpeechResources->pikachuIntroTilemap = MallocAndDecompress(sPikachuIntro_Background_Tilemap, &size);
@@ -1045,7 +1047,7 @@ static void Task_PikachuIntro_HandleInput(u8 taskId)
         break;
     case PIKACHU_INTRO_EXIT:
         DestroyTextCursorSprite(gTasks[taskId].tTextCursorSpriteId);
-        PlayBGM(MUS_NEW_GAME_EXIT);
+        // PlayBGM(MUS_NEW_GAME_EXIT);
         tBlendTarget = 24;
         gMain.state++;
         break;

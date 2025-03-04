@@ -38,6 +38,9 @@
 
 const u8 sPhysStr[] =_("\nphys");
 const u8 sSpecStr[] =_("\nspec");
+const u8 sSpace[] =_(" ");
+const u8 sSpaces[] =_("      ");
+u8 sHiddenPowerType;
 
 // needs conflicting header to match (curIndex is s8 in the function, but has to be defined as u8 here)
 extern s16 SeekToNextMonInBox(struct BoxPokemon * boxMons, u8 curIndex, u8 maxIndex, u8 flags);
@@ -171,7 +174,7 @@ struct PokemonSummaryScreenData
         u8 ALIGNED(4) otNameStrBufs[2][12];
 
         u8 ALIGNED(4) dexNumStrBuf[5];
-        u8 ALIGNED(4) unk306C[7];
+        u8 ALIGNED(4) unk306C[15];
         u8 ALIGNED(4) itemNameStrBuf[ITEM_NAME_LENGTH + 1];
 
         u8 ALIGNED(4) genderSymbolStrBuf[3];
@@ -2095,6 +2098,10 @@ static void BufferMonInfo(void)
     u16 heldItem;
     u32 otId;
 
+    s32 powerBits, typeBits;
+    u16 dynamicBasePower;
+    u8 dynamicMoveType;
+
     dexNum = SpeciesToPokedexNum(GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPECIES));
     if (dexNum == 0xffff)
         StringCopy(sMonSummaryScreen->summary.dexNumStrBuf, gText_PokeSum_DexNoUnknown);
@@ -2135,13 +2142,39 @@ static void BufferMonInfo(void)
         if (StringCompare(sMonSummaryScreen->summary.nicknameStrBuf, gSpeciesNames[dexNum]) == 0)
             StringCopy(sMonSummaryScreen->summary.genderSymbolStrBuf, gString_Dummy);
 
-    GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_OT_NAME, tempStr);
-    StringCopyN_Multibyte(sMonSummaryScreen->summary.otNameStrBuf, tempStr, PLAYER_NAME_LENGTH);
+    powerBits = ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP_IV) & 2) >> 1)
+              | ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_ATK_IV) & 2) << 0)
+              | ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_DEF_IV) & 2) << 1)
+              | ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPEED_IV) & 2) << 2)
+              | ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPATK_IV) & 2) << 3)
+              | ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPDEF_IV) & 2) << 4);
+    typeBits  = ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP_IV) & 1) << 0)
+              | ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_ATK_IV) & 1) << 1)
+              | ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_DEF_IV) & 1) << 2)
+              | ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPEED_IV) & 1) << 3)
+              | ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPATK_IV) & 1) << 4)
+              | ((GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPDEF_IV) & 1) << 5);
 
-    ConvertInternationalString(sMonSummaryScreen->summary.otNameStrBuf, GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_LANGUAGE));
+    dynamicBasePower = (40 * powerBits) / 63 + 30;
+
+    // Subtract 3 instead of 1 below because 2 types are excluded (TYPE_NORMAL and TYPE_MYSTERY)
+    // The final + 1 skips past Normal, and the following conditional skips TYPE_MYSTERY
+    dynamicMoveType = ((NUMBER_OF_MON_TYPES - 3) * typeBits) / 63 + 1;
+    if (dynamicMoveType >= TYPE_MYSTERY)
+        dynamicMoveType++;
+    dynamicMoveType |= F_DYNAMIC_TYPE_1 | F_DYNAMIC_TYPE_2;
+    sHiddenPowerType = dynamicMoveType & DYNAMIC_TYPE_MASK;
+
+    StringCopy(sMonSummaryScreen->summary.otNameStrBuf, sSpaces);
+    ConvertIntToDecimalStringN(sMonSummaryScreen->summary.otNameStrBuf+6, dynamicBasePower, STR_CONV_MODE_LEADING_ZEROS, 2);
+
+    GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_OT_NAME, tempStr);
+    StringAppendN(tempStr, sSpace, 1);
+    StringCopyN_Multibyte(sMonSummaryScreen->summary.unk306C, tempStr, PLAYER_NAME_LENGTH + 1);
 
     otId = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_OT_ID) & 0xffff;
-    ConvertIntToDecimalStringN(sMonSummaryScreen->summary.unk306C, otId, STR_CONV_MODE_LEADING_ZEROS, 5);
+    ConvertIntToDecimalStringN(tempStr, otId, STR_CONV_MODE_LEADING_ZEROS, 5);
+    StringAppendN(sMonSummaryScreen->summary.unk306C, tempStr, 5);
 
     ConvertIntToDecimalStringN(tempStr, GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_LEVEL), STR_CONV_MODE_LEFT_ALIGN, 3);
     StringCopy(sMonSummaryScreen->summary.levelStrBuf, gText_Lv);
@@ -2169,12 +2202,12 @@ static void BufferMonSkills(void)
     u32 exp;
     u32 expToNextLevel;
 
-    if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(R_BUTTON)){
+    if (JOY_HELD(R_BUTTON)){
       hp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP_IV);
       ConvertIntToDecimalStringN(tempStr, hp, STR_CONV_MODE_LEFT_ALIGN, 3);
       StringCopy(sMonSummaryScreen->summary.curHpStrBuf, gText_IVs);
       StringAppend(sMonSummaryScreen->summary.curHpStrBuf, tempStr);
-    } else if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(L_BUTTON)){
+    } else if (JOY_HELD(L_BUTTON)){
       hp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP_EV);
       ConvertIntToDecimalStringN(tempStr, hp, STR_CONV_MODE_LEFT_ALIGN, 3);
       StringCopy(sMonSummaryScreen->summary.curHpStrBuf, gText_EVs);
@@ -2215,9 +2248,9 @@ static void BufferMonSkills(void)
     }
     else
     {
-        if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(R_BUTTON)){
+        if (JOY_HELD(R_BUTTON)){
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_ATK_IV);
-        } else if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(L_BUTTON)) {
+        } else if (JOY_HELD(L_BUTTON)) {
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_ATK_EV);
         } else {
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_ATK);
@@ -2225,9 +2258,9 @@ static void BufferMonSkills(void)
         ConvertIntToDecimalStringN(sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_ATK], statValue, STR_CONV_MODE_LEFT_ALIGN, 3);
         sMonSkillsPrinterXpos->atkStr = GetNumberRightAlign27(sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_ATK]);
 
-        if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(R_BUTTON)){
+        if (JOY_HELD(R_BUTTON)){
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_DEF_IV);
-        } else if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(L_BUTTON)) {
+        } else if (JOY_HELD(L_BUTTON)) {
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_DEF_EV);
         } else {
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_DEF);
@@ -2235,9 +2268,9 @@ static void BufferMonSkills(void)
         ConvertIntToDecimalStringN(sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_DEF], statValue, STR_CONV_MODE_LEFT_ALIGN, 3);
         sMonSkillsPrinterXpos->defStr = GetNumberRightAlign27(sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_DEF]);
 
-        if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(R_BUTTON)){
+        if (JOY_HELD(R_BUTTON)){
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPATK_IV);
-        } else if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(L_BUTTON)) {
+        } else if (JOY_HELD(L_BUTTON)) {
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPATK_EV);
         } else {
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPATK);
@@ -2245,9 +2278,9 @@ static void BufferMonSkills(void)
         ConvertIntToDecimalStringN(sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_SPA], statValue, STR_CONV_MODE_LEFT_ALIGN, 3);
         sMonSkillsPrinterXpos->spAStr = GetNumberRightAlign27(sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_SPA]);
 
-        if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(R_BUTTON)){
+        if (JOY_HELD(R_BUTTON)){
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPDEF_IV);
-        } else if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(L_BUTTON)) {
+        } else if (JOY_HELD(L_BUTTON)) {
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPDEF_EV);
         } else {
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPDEF);
@@ -2255,9 +2288,9 @@ static void BufferMonSkills(void)
         ConvertIntToDecimalStringN(sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_SPD], statValue, STR_CONV_MODE_LEFT_ALIGN, 3);
         sMonSkillsPrinterXpos->spDStr = GetNumberRightAlign27(sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_SPD]);
 
-        if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(R_BUTTON)){
+        if (JOY_HELD(R_BUTTON)){
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPEED_IV);
-        } else if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) && JOY_HELD(L_BUTTON)) {
+        } else if (JOY_HELD(L_BUTTON)) {
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPEED_EV);
         } else {
           statValue = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPEED);
@@ -3420,6 +3453,7 @@ static void PokeSum_PrintMonTypeIcons(void)
         if (!sMonSummaryScreen->isEgg)
         {
             BlitMenuInfoIcon(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], sMonSummaryScreen->monTypes[0] + 1, 47, 35);
+            BlitMenuInfoIcon(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], sHiddenPowerType + 1, 47, 50);
 
             if (sMonSummaryScreen->monTypes[0] != sMonSummaryScreen->monTypes[1])
                 BlitMenuInfoIcon(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], sMonSummaryScreen->monTypes[1] + 1, 83, 35);
