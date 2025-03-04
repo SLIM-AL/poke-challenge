@@ -4,15 +4,15 @@ pokes = [
   ('NONE', 'NULL'),
 
   ('BULBASAUR', 'GrassStarter1'),
-  ('IVYSAUR', 'GrassStarter2'),
+  ('IVYSAUR', 'GrassBug2'),
   ('VENUSAUR', 'GrassStarter3'),
 
   ('CHARMANDER', 'FireStarter1'),
-  ('CHARMELEON', 'FireStarter2'),
+  ('CHARMELEON', 'Cave1'),
   ('CHARIZARD', 'FireStarter3'),
 
   ('SQUIRTLE', 'WaterStarter1'),
-  ('WARTORTLE', 'WaterStarter2'),
+  ('WARTORTLE', 'WaterIce1'),
   ('BLASTOISE', 'WaterStarter3'),
 
   ('CATERPIE', 'GrassBug1'),
@@ -218,28 +218,28 @@ pokes = [
 
   ('SNORLAX', 'Overworld2'),
 
-  ('ARTICUNO', 'Legendary'),
-  ('ZAPDOS', 'Legendary'),
-  ('MOLTRES', 'Legendary'),
+  ('ARTICUNO', 'Unobtainable'),
+  ('ZAPDOS', 'Unobtainable'),
+  ('MOLTRES', 'Unobtainable'),
 
   ('DRATINI', 'WaterIce1'),
   ('DRAGONAIR', 'CeruleanCave'),
   ('DRAGONITE', 'NotCatchable'),
 
-  ('MEWTWO', 'NotInGame'),
+  ('MEWTWO', 'Unobtainable'),
 
-  ('MEW', 'NotInGame'),
+  ('MEW', 'Unobtainable'),
 
   ('CHIKORITA', 'GrassStarter1'),
-  ('BAYLEEF', 'GrassStarter2'),
+  ('BAYLEEF', 'GrassBug2'),
   ('MEGANIUM', 'GrassStarter3'),
 
   ('CYNDAQUIL', 'FireStarter1'),
-  ('QUILAVA', 'FireStarter2'),
+  ('QUILAVA', 'Spooky1'),
   ('TYPHLOSION', 'FireStarter3'),
 
   ('TOTODILE', 'WaterStarter1'),
-  ('CROCONAW', 'WaterStarter2'),
+  ('CROCONAW', 'WaterIce1'),
   ('FERALIGATR', 'WaterStarter3'),
 
   ('SENTRET', 'NormalFlying1'),
@@ -260,8 +260,8 @@ pokes = [
   ('LANTURN', 'WaterIce2'),
 
   ('PICHU', 'EarlyBoost'),
-  ('CLEFFA', 'Spooky1'),
-  ('IGGLYBUFF', 'Spooky1'),
+  ('CLEFFA', 'EarlyBoost'),
+  ('IGGLYBUFF', 'EarlyBoost'),
 
   ('TOGEPI', 'Urban1'),
   ('TOGETIC', 'Urban2'),
@@ -305,9 +305,9 @@ pokes = [
 
   ('MISDREAVUS', 'Spooky1'),
 
-  ('UNOWN', 'NotInGame'),
+  ('UNOWN', 'Unobtainable'),
 
-  ('WOBBUFFET', 'NotInGame'),
+  ('WOBBUFFET', 'Unobtainable'),
 
   ('GIRAFARIG', 'Overworld1'),
 
@@ -364,7 +364,7 @@ pokes = [
   ('PORYGON2', 'Urban2'),
 
   ('STANTLER', 'NormalFlying1'),
-  ('SMEARGLE', 'NotInGame'),
+  ('SMEARGLE', 'Unobtainable'),
 
   ('TYROGUE', 'Cave1'),
 
@@ -380,33 +380,33 @@ pokes = [
 
   ('BLISSEY', 'NotCatchable'),
 
-  ('RAIKOU', 'NotInGame'),
-  ('ENTEI', 'NotInGame'),
-  ('SUICUNE', 'NotInGame'),
+  ('RAIKOU', 'Unobtainable'),
+  ('ENTEI', 'Unobtainable'),
+  ('SUICUNE', 'Unobtainable'),
 
   ('LARVITAR', 'Spooky1'),
   ('PUPITAR', 'CeruleanCave'),
   ('TYRANITAR', 'NotCatchable'),
 
-  ('LUGIA', 'NotInGame'),
-  ('HO_OH', 'NotInGame'),
+  ('LUGIA', 'Unobtainable'),
+  ('HO_OH', 'Unobtainable'),
 
-  ('CELEBI', 'NotInGame'),
+  ('CELEBI', 'Unobtainable'),
 
   ('TREECKO', 'GrassStarter1'),
-  ('GROVYLE', 'GrassStarter2'),
+  ('GROVYLE', 'GrassBug2'),
   ('SCEPTILE', 'GrassStarter3'),
 
   ('TORCHIC', 'FireStarter1'),
-  ('COMBUSKEN', 'FireStarter2'),
+  ('COMBUSKEN', 'Urban1'),
   ('BLAZIKEN', 'FireStarter3'),
 
   ('MUDKIP', 'WaterStarter1'),
-  ('MARSHTOMP', 'WaterStarter2'),
+  ('MARSHTOMP', 'WaterIce1'),
   ('SWAMPERT', 'WaterStarter3'),
 
-  ('POOCHYENA', 'NormalFlying1'),
-  ('MIGHTYENA', 'NormalFlying2'),
+  ('POOCHYENA', 'Spooky1'),
+  ('MIGHTYENA', 'Spooky2'),
 
   ('ZIGZAGOON', 'NormalFlying1'),
   ('LINOONE', 'NormalFlying2'),
@@ -447,7 +447,7 @@ pokes = [
 
   ('NINCADA', 'GrassBug1'),
   ('NINJASK', 'GrassBug3'),
-  ('SHEDINJA', 'NotInGame'),
+  ('SHEDINJA', 'Unobtainable'),
 
   ('WHISMUR', 'Cave1'),
   ('LOUDRED', 'Cave2'),
@@ -479,11 +479,11 @@ pokes = [
 
   ('PLUSLE', 'Urban1'),
 
-  ('MINUN', 'NotInGame'),
+  ('MINUN', 'Unobtainable'),
 
   ('VOLBEAT', 'GrassBug1'),
 
-  ('ILLUMISE', 'GrassBug2'),
+  ('ILLUMISE', 'GrassBug1'),
 
   ('ROSELIA', 'GrassBug2'),
 
@@ -542,12 +542,12 @@ pokes = [
   ('FEEBAS', 'WaterIce1'),
   ('MILOTIC', 'NotCatchable'),
 
-  ('CASTFORM', 'NotInGame'),
+  ('CASTFORM', 'Unobtainable'),
 
   ('KECLEON', 'Overworld1'),
 
   ('SHUPPET', 'Spooky1'),
-  ('BANETTE', 'Spooky2'),
+  ('BANETTE', 'Spooky1'),
 
   ('DUSKULL', 'Spooky1'),
   ('DUSCLOPS', 'Spooky2'),
@@ -558,7 +558,7 @@ pokes = [
 
   ('ABSOL', 'Overworld1'),
 
-  ('WYNAUT', 'NotInGame'),
+  ('WYNAUT', 'Unobtainable'),
 
   ('SNORUNT', 'Cave1'),
   ('GLALIE', 'Cave2'),
@@ -573,7 +573,7 @@ pokes = [
 
   ('RELICANTH', 'WaterIce1'),
 
-  ('LUVDISC', 'NotInGame'),
+  ('LUVDISC', 'Unobtainable'),
 
   ('BAGON', 'GrassBug2'),
   ('SHELGON', 'CeruleanCave'),
@@ -583,20 +583,20 @@ pokes = [
   ('METANG', 'CeruleanCave'),
   ('METAGROSS', 'NotCatchable'),
 
-  ('REGIROCK', 'NotInGame'),
-  ('REGICE', 'NotInGame'),
-  ('REGISTEEL', 'NotInGame'),
+  ('REGIROCK', 'Unobtainable'),
+  ('REGICE', 'Unobtainable'),
+  ('REGISTEEL', 'Unobtainable'),
 
-  ('LATIAS', 'NotInGame'),
-  ('LATIOS', 'NotInGame'),
+  ('LATIAS', 'Unobtainable'),
+  ('LATIOS', 'Unobtainable'),
 
-  ('KYOGRE', 'NotInGame'),
-  ('GROUDON', 'NotInGame'),
-  ('DUSKNOIR', 'NotInGame'),
+  ('KYOGRE', 'Unobtainable'),
+  ('GROUDON', 'Unobtainable'),
+  ('DUSKNOIR', 'Unobtainable'),
 
-  ('JIRACHI', 'NotInGame'),
+  ('JIRACHI', 'Unobtainable'),
 
-  ('DEOXYS', 'NotInGame'),
+  ('DEOXYS', 'Unobtainable'),
 
   ('TURTWIG', 'NULL'),
   ('GROTLE', 'NULL'),
@@ -644,12 +644,12 @@ pokes = [
   ('HONCHKROW', 'Spooky2'),
   ('GLAMEOW', 'NULL'),
   ('PURUGLY', 'NULL'),
-  ('CHINGLING', 'NotInGame'),
+  ('CHINGLING', 'Unobtainable'),
   ('STUNKY', 'NULL'),
   ('SKUNTANK', 'NULL'),
   ('BRONZOR', 'NULL'),
   ('BRONZONG', 'NULL'),
-  ('BONSLY', 'NotInGame'),
+  ('BONSLY', 'Unobtainable'),
   ('MIME_JR', 'EarlyBoost'),
   ('HAPPINY', 'Overworld1'),
   ('CHATOT', 'NULL'),
@@ -669,7 +669,7 @@ pokes = [
   ('CARNIVINE', 'NULL'),
   ('FINNEON', 'NULL'),
   ('LUMINEON', 'NULL'),
-  ('MANTYKE', 'NotInGame'),
+  ('MANTYKE', 'Unobtainable'),
   ('SNOVER', 'NULL'),
   ('ABOMASNOW', 'NULL'),
   ('WEAVILE', 'NotCatchable'),
@@ -796,21 +796,35 @@ groups = {
   'Overworld2': [],
   'CeruleanCave': [],
   'NotCatchable': [],
-  'Legendary': [],
-  'NotInGame': [],
+  'GrassStarter3': [],
+  'FireStarter3': [],
+  'WaterStarter3': [],
+  'Unobtainable': [],
 }
 
 def rel_nat_dex_pos(x):
-  # Machop, Gastly, Togepi, Togetic, Trapinch, and Happiny
-  # are much better than their dex numbers suggest.
-  if x in set([66, 92, 175, 176, 328, 440]):
+  # Clefairy, Abra, Machop, Tentacool, Gastly, Starmie, Togepi, Togetic,
+  # Gligar, Sneasel, Trapinch, and Happiny are much better than
+  # their dex numbers suggest.
+  if x in set([35, 63, 66, 72, 92, 121, 173, 175, 176, 207, 215, 328, 440]):
     return 0.9
+  # Shroomish.
+  if x in set([285]):
+    return 0.75
   if x <= 151:
+    # Modify starters.
+    if x <= 9:
+      x = x + 75
     return x / 151
   if x <= 251:
+    # Modify starters.
+    if x <= 160:
+      x = x + 50
     # Johto dex is small and has good pokemon, so scale them.
     return (x - 151) / (251 - 151) * 0.95 + 0.025
   if x <= 386:
+    if x <= 260:
+      x = x + 100
     return (x - 251) / (386 - 251)
   return (x - 386) / (494 - 386)
 
@@ -822,7 +836,7 @@ for pokedex_num in sorted_dex_nums:
   if group_name not in groups:
     groups[group_name] = []
   groups[group_name].append((pokedex_num, poke_name))
-  if group_name != 'NotInGame':
+  if group_name != 'Unobtainable':
     c_bottom += '  [SPECIES_' + poke_name + '] = gGroup_' + group_name + ',\n'
 c_bottom += '};\n'
 
@@ -839,7 +853,7 @@ for group_name, pokes_with_id in groups.items():
 
   if not_starter_group:
     md += '| ' + group_name + ' |\n| --- |\n|'
-  if group_name != "NotInGame":
+  if group_name != "Unobtainable":
     c = 'const u16 gGroup_' + group_name + '[] =\n{\n  /*SIZE=*/' + str(len(pokes_with_id)) + ',\n'
   else:
     c = ''
@@ -850,12 +864,12 @@ for group_name, pokes_with_id in groups.items():
       image_url = 'https://www.serebii.net/pokedex-swsh/icon/' + dex_num + '.png'
       link_url = 'https://www.serebii.net/pokedex-dp/' + dex_num + '.shtml'
       md += '[![](' + image_url + " '" + poke_name + "')](" + link_url + ')'
-    if group_name != "NotInGame":
+    if group_name != "Unobtainable":
       c += '  SPECIES_' + poke_name + ',\n'
 
   if not_starter_group:
     md += '|\n\n'
-  if group_name != "NotInGame":
+  if group_name != "Unobtainable":
     c_top += c + '};\n\n'
 
 with open('README.md', 'w') as md_file:

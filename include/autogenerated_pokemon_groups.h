@@ -11,29 +11,30 @@
 
 const u16 gGroup_EarlyBoost[] =
 {
-  /*SIZE=*/16,
+  /*SIZE=*/18,
   SPECIES_BUDEW,
   SPECIES_PICHU,
+  SPECIES_IGGLYBUFF,
   SPECIES_AZURILL,
   SPECIES_MIME_JR,
   SPECIES_SMOOCHUM,
   SPECIES_ELEKID,
   SPECIES_MAGBY,
+  SPECIES_CLEFFA,
   SPECIES_BULBASAUR,
-  SPECIES_TREECKO,
   SPECIES_CHIKORITA,
+  SPECIES_TREECKO,
   SPECIES_CHARMANDER,
-  SPECIES_TORCHIC,
   SPECIES_CYNDAQUIL,
+  SPECIES_TORCHIC,
   SPECIES_SQUIRTLE,
-  SPECIES_MUDKIP,
   SPECIES_TOTODILE,
+  SPECIES_MUDKIP,
 };
 
 const u16 gGroup_NormalFlying1[] =
 {
-  /*SIZE=*/18,
-  SPECIES_POOCHYENA,
+  /*SIZE=*/17,
   SPECIES_ZIGZAGOON,
   SPECIES_PIDGEY,
   SPECIES_SENTRET,
@@ -55,8 +56,7 @@ const u16 gGroup_NormalFlying1[] =
 
 const u16 gGroup_NormalFlying2[] =
 {
-  /*SIZE=*/16,
-  SPECIES_MIGHTYENA,
+  /*SIZE=*/15,
   SPECIES_LINOONE,
   SPECIES_PIDGEOTTO,
   SPECIES_FURRET,
@@ -76,7 +76,7 @@ const u16 gGroup_NormalFlying2[] =
 
 const u16 gGroup_Cave1[] =
 {
-  /*SIZE=*/20,
+  /*SIZE=*/21,
   SPECIES_CASCOON,
   SPECIES_ZUBAT,
   SPECIES_PARAS,
@@ -87,16 +87,17 @@ const u16 gGroup_Cave1[] =
   SPECIES_ARON,
   SPECIES_MEDITITE,
   SPECIES_GEODUDE,
+  SPECIES_CHARMELEON,
   SPECIES_DUNSPARCE,
-  SPECIES_GLIGAR,
   SPECIES_SHUCKLE,
-  SPECIES_SNEASEL,
   SPECIES_SOLROCK,
   SPECIES_SWINUB,
   SPECIES_ANORITH,
   SPECIES_SNORUNT,
   SPECIES_TYROGUE,
   SPECIES_MACHOP,
+  SPECIES_GLIGAR,
+  SPECIES_SNEASEL,
 };
 
 const u16 gGroup_Cave2[] =
@@ -121,7 +122,7 @@ const u16 gGroup_Cave2[] =
 
 const u16 gGroup_GrassBug1[] =
 {
-  /*SIZE=*/13,
+  /*SIZE=*/14,
   SPECIES_CATERPIE,
   SPECIES_METAPOD,
   SPECIES_WEEDLE,
@@ -134,29 +135,32 @@ const u16 gGroup_GrassBug1[] =
   SPECIES_SUNKERN,
   SPECIES_YANMA,
   SPECIES_VOLBEAT,
+  SPECIES_ILLUMISE,
   SPECIES_PINECO,
 };
 
 const u16 gGroup_GrassBug2[] =
 {
-  /*SIZE=*/20,
+  /*SIZE=*/22,
   SPECIES_LOTAD,
   SPECIES_SEEDOT,
   SPECIES_LEDIAN,
   SPECIES_ARIADOS,
-  SPECIES_SHROOMISH,
   SPECIES_ODDISH,
   SPECIES_VENONAT,
   SPECIES_SKIPLOOM,
   SPECIES_SUNFLORA,
   SPECIES_BELLSPROUT,
-  SPECIES_ILLUMISE,
   SPECIES_ROSELIA,
+  SPECIES_IVYSAUR,
+  SPECIES_BAYLEEF,
   SPECIES_CACNEA,
   SPECIES_HERACROSS,
   SPECIES_EXEGGCUTE,
   SPECIES_LILEEP,
+  SPECIES_SHROOMISH,
   SPECIES_TANGELA,
+  SPECIES_GROVYLE,
   SPECIES_SCYTHER,
   SPECIES_PINSIR,
   SPECIES_BAGON,
@@ -185,22 +189,23 @@ const u16 gGroup_GrassBug3[] =
 
 const u16 gGroup_Spooky1[] =
 {
-  /*SIZE=*/18,
-  SPECIES_CLEFAIRY,
-  SPECIES_CLEFFA,
-  SPECIES_IGGLYBUFF,
+  /*SIZE=*/19,
+  SPECIES_POOCHYENA,
   SPECIES_JIGGLYPUFF,
   SPECIES_GOLBAT,
   SPECIES_SABLEYE,
   SPECIES_MAWILE,
   SPECIES_MURKROW,
   SPECIES_MISDREAVUS,
+  SPECIES_QUILAVA,
   SPECIES_ONIX,
   SPECIES_LUNATONE,
   SPECIES_BALTOY,
   SPECIES_CUBONE,
   SPECIES_SHUPPET,
+  SPECIES_BANETTE,
   SPECIES_DUSKULL,
+  SPECIES_CLEFAIRY,
   SPECIES_GASTLY,
   SPECIES_LARVITAR,
   SPECIES_AERODACTYL,
@@ -209,6 +214,7 @@ const u16 gGroup_Spooky1[] =
 const u16 gGroup_Spooky2[] =
 {
   /*SIZE=*/13,
+  SPECIES_MIGHTYENA,
   SPECIES_CROBAT,
   SPECIES_CLEFABLE,
   SPECIES_WIGGLYTUFF,
@@ -219,20 +225,20 @@ const u16 gGroup_Spooky2[] =
   SPECIES_HAUNTER,
   SPECIES_CLAYDOL,
   SPECIES_MAROWAK,
-  SPECIES_BANETTE,
   SPECIES_DUSCLOPS,
   SPECIES_FROSLASS,
 };
 
 const u16 gGroup_Urban1[] =
 {
-  /*SIZE=*/15,
+  /*SIZE=*/16,
   SPECIES_PLUSLE,
   SPECIES_MAGNEMITE,
   SPECIES_GRIMER,
   SPECIES_SLUGMA,
   SPECIES_VOLTORB,
   SPECIES_KOFFING,
+  SPECIES_COMBUSKEN,
   SPECIES_MR_MIME,
   SPECIES_JYNX,
   SPECIES_ELECTABUZZ,
@@ -262,18 +268,19 @@ const u16 gGroup_Urban2[] =
 
 const u16 gGroup_WaterIce1[] =
 {
-  /*SIZE=*/30,
+  /*SIZE=*/33,
   SPECIES_WINGULL,
   SPECIES_CHINCHOU,
   SPECIES_SURSKIT,
   SPECIES_PSYDUCK,
   SPECIES_POLIWAG,
   SPECIES_WOOPER,
-  SPECIES_TENTACOOL,
   SPECIES_CARVANHA,
   SPECIES_WAILMER,
   SPECIES_SLOWPOKE,
+  SPECIES_WARTORTLE,
   SPECIES_SEEL,
+  SPECIES_CROCONAW,
   SPECIES_QWILFISH,
   SPECIES_SHELLDER,
   SPECIES_KRABBY,
@@ -286,10 +293,12 @@ const u16 gGroup_WaterIce1[] =
   SPECIES_HORSEA,
   SPECIES_GOLDEEN,
   SPECIES_STARYU,
+  SPECIES_MARSHTOMP,
   SPECIES_SPHEAL,
   SPECIES_CLAMPERL,
   SPECIES_MAGIKARP,
   SPECIES_RELICANTH,
+  SPECIES_TENTACOOL,
   SPECIES_OMANYTE,
   SPECIES_KABUTO,
   SPECIES_DRATINI,
@@ -317,11 +326,11 @@ const u16 gGroup_WaterIce2[] =
   SPECIES_SEADRA,
   SPECIES_GLACEON,
   SPECIES_SEAKING,
-  SPECIES_STARMIE,
   SPECIES_SEALEO,
   SPECIES_HUNTAIL,
   SPECIES_GOREBYSS,
   SPECIES_VAPOREON,
+  SPECIES_STARMIE,
   SPECIES_OMASTAR,
   SPECIES_KABUTOPS,
 };
@@ -344,7 +353,6 @@ const u16 gGroup_Overworld1[] =
   SPECIES_SKITTY,
   SPECIES_MANKEY,
   SPECIES_GROWLITHE,
-  SPECIES_ABRA,
   SPECIES_ELECTRIKE,
   SPECIES_GULPIN,
   SPECIES_PONYTA,
@@ -363,6 +371,7 @@ const u16 gGroup_Overworld1[] =
   SPECIES_CHIMECHO,
   SPECIES_ABSOL,
   SPECIES_MILTANK,
+  SPECIES_ABRA,
   SPECIES_TRAPINCH,
   SPECIES_HAPPINY,
 };
@@ -464,128 +473,69 @@ const u16 gGroup_NotCatchable[] =
   SPECIES_DRAGONITE,
 };
 
-const u16 gGroup_Legendary[] =
-{
-  /*SIZE=*/3,
-  SPECIES_ARTICUNO,
-  SPECIES_ZAPDOS,
-  SPECIES_MOLTRES,
-};
-
-const u16 gGroup_GrassStarter1[] =
-{
-  /*SIZE=*/3,
-  SPECIES_BULBASAUR,
-  SPECIES_TREECKO,
-  SPECIES_CHIKORITA,
-};
-
-const u16 gGroup_GrassStarter2[] =
-{
-  /*SIZE=*/3,
-  SPECIES_IVYSAUR,
-  SPECIES_GROVYLE,
-  SPECIES_BAYLEEF,
-};
-
 const u16 gGroup_GrassStarter3[] =
 {
   /*SIZE=*/3,
   SPECIES_VENUSAUR,
-  SPECIES_SCEPTILE,
   SPECIES_MEGANIUM,
-};
-
-const u16 gGroup_FireStarter1[] =
-{
-  /*SIZE=*/3,
-  SPECIES_CHARMANDER,
-  SPECIES_TORCHIC,
-  SPECIES_CYNDAQUIL,
-};
-
-const u16 gGroup_FireStarter2[] =
-{
-  /*SIZE=*/3,
-  SPECIES_CHARMELEON,
-  SPECIES_COMBUSKEN,
-  SPECIES_QUILAVA,
+  SPECIES_SCEPTILE,
 };
 
 const u16 gGroup_FireStarter3[] =
 {
   /*SIZE=*/3,
   SPECIES_CHARIZARD,
-  SPECIES_BLAZIKEN,
   SPECIES_TYPHLOSION,
-};
-
-const u16 gGroup_WaterStarter1[] =
-{
-  /*SIZE=*/3,
-  SPECIES_SQUIRTLE,
-  SPECIES_MUDKIP,
-  SPECIES_TOTODILE,
-};
-
-const u16 gGroup_WaterStarter2[] =
-{
-  /*SIZE=*/3,
-  SPECIES_WARTORTLE,
-  SPECIES_MARSHTOMP,
-  SPECIES_CROCONAW,
+  SPECIES_BLAZIKEN,
 };
 
 const u16 gGroup_WaterStarter3[] =
 {
   /*SIZE=*/3,
   SPECIES_BLASTOISE,
-  SPECIES_SWAMPERT,
   SPECIES_FERALIGATR,
+  SPECIES_SWAMPERT,
+};
+
+const u16 gGroup_GrassStarter1[] =
+{
+  /*SIZE=*/3,
+  SPECIES_BULBASAUR,
+  SPECIES_CHIKORITA,
+  SPECIES_TREECKO,
+};
+
+const u16 gGroup_FireStarter1[] =
+{
+  /*SIZE=*/3,
+  SPECIES_CHARMANDER,
+  SPECIES_CYNDAQUIL,
+  SPECIES_TORCHIC,
+};
+
+const u16 gGroup_WaterStarter1[] =
+{
+  /*SIZE=*/3,
+  SPECIES_SQUIRTLE,
+  SPECIES_TOTODILE,
+  SPECIES_MUDKIP,
 };
 
 const u16* const gMonGroups[] =
 {
   [SPECIES_NONE] = NULL,
-  [SPECIES_BULBASAUR] = gGroup_GrassStarter1,
-  [SPECIES_TREECKO] = gGroup_GrassStarter1,
-  [SPECIES_IVYSAUR] = gGroup_GrassStarter2,
-  [SPECIES_GROVYLE] = gGroup_GrassStarter2,
-  [SPECIES_VENUSAUR] = gGroup_GrassStarter3,
-  [SPECIES_SCEPTILE] = gGroup_GrassStarter3,
-  [SPECIES_CHARMANDER] = gGroup_FireStarter1,
-  [SPECIES_TORCHIC] = gGroup_FireStarter1,
-  [SPECIES_CHARMELEON] = gGroup_FireStarter2,
-  [SPECIES_CHIKORITA] = gGroup_GrassStarter1,
-  [SPECIES_COMBUSKEN] = gGroup_FireStarter2,
-  [SPECIES_CHARIZARD] = gGroup_FireStarter3,
-  [SPECIES_BAYLEEF] = gGroup_GrassStarter2,
-  [SPECIES_BLAZIKEN] = gGroup_FireStarter3,
-  [SPECIES_SQUIRTLE] = gGroup_WaterStarter1,
-  [SPECIES_MUDKIP] = gGroup_WaterStarter1,
-  [SPECIES_WARTORTLE] = gGroup_WaterStarter2,
-  [SPECIES_MEGANIUM] = gGroup_GrassStarter3,
-  [SPECIES_MARSHTOMP] = gGroup_WaterStarter2,
-  [SPECIES_BLASTOISE] = gGroup_WaterStarter3,
-  [SPECIES_CYNDAQUIL] = gGroup_FireStarter1,
   [SPECIES_CATERPIE] = gGroup_GrassBug1,
-  [SPECIES_SWAMPERT] = gGroup_WaterStarter3,
-  [SPECIES_QUILAVA] = gGroup_FireStarter2,
   [SPECIES_METAPOD] = gGroup_GrassBug1,
-  [SPECIES_POOCHYENA] = gGroup_NormalFlying1,
+  [SPECIES_POOCHYENA] = gGroup_Spooky1,
   [SPECIES_BUTTERFREE] = gGroup_GrassBug3,
-  [SPECIES_MIGHTYENA] = gGroup_NormalFlying2,
-  [SPECIES_TYPHLOSION] = gGroup_FireStarter3,
+  [SPECIES_MIGHTYENA] = gGroup_Spooky2,
   [SPECIES_WEEDLE] = gGroup_GrassBug1,
   [SPECIES_ZIGZAGOON] = gGroup_NormalFlying1,
-  [SPECIES_TOTODILE] = gGroup_WaterStarter1,
   [SPECIES_KAKUNA] = gGroup_GrassBug1,
   [SPECIES_LINOONE] = gGroup_NormalFlying2,
   [SPECIES_BEEDRILL] = gGroup_GrassBug3,
-  [SPECIES_CROCONAW] = gGroup_WaterStarter2,
   [SPECIES_WURMPLE] = gGroup_GrassBug1,
   [SPECIES_PIDGEY] = gGroup_NormalFlying1,
-  [SPECIES_FERALIGATR] = gGroup_WaterStarter3,
   [SPECIES_SILCOON] = gGroup_GrassBug1,
   [SPECIES_PIDGEOTTO] = gGroup_NormalFlying2,
   [SPECIES_BEAUTIFLY] = gGroup_GrassBug3,
@@ -635,15 +585,12 @@ const u16* const gMonGroups[] =
   [SPECIES_PICHU] = gGroup_EarlyBoost,
   [SPECIES_NIDOKING] = gGroup_Overworld2,
   [SPECIES_GARDEVOIR] = gGroup_NotCatchable,
-  [SPECIES_CLEFAIRY] = gGroup_Spooky1,
-  [SPECIES_CLEFFA] = gGroup_Spooky1,
   [SPECIES_SURSKIT] = gGroup_WaterIce1,
   [SPECIES_CLEFABLE] = gGroup_Spooky2,
-  [SPECIES_IGGLYBUFF] = gGroup_Spooky1,
+  [SPECIES_IGGLYBUFF] = gGroup_EarlyBoost,
   [SPECIES_MASQUERAIN] = gGroup_WaterIce2,
   [SPECIES_VULPIX] = gGroup_Overworld1,
   [SPECIES_NINETALES] = gGroup_Overworld2,
-  [SPECIES_SHROOMISH] = gGroup_GrassBug2,
   [SPECIES_JIGGLYPUFF] = gGroup_Spooky1,
   [SPECIES_BRELOOM] = gGroup_NotCatchable,
   [SPECIES_WIGGLYTUFF] = gGroup_Spooky2,
@@ -708,7 +655,6 @@ const u16* const gMonGroups[] =
   [SPECIES_POLIWRATH] = gGroup_Overworld2,
   [SPECIES_SUNFLORA] = gGroup_GrassBug2,
   [SPECIES_MEDITITE] = gGroup_Cave1,
-  [SPECIES_ABRA] = gGroup_Overworld1,
   [SPECIES_MEDICHAM] = gGroup_Cave2,
   [SPECIES_KADABRA] = gGroup_Overworld2,
   [SPECIES_YANMA] = gGroup_GrassBug1,
@@ -725,11 +671,10 @@ const u16* const gMonGroups[] =
   [SPECIES_VOLBEAT] = gGroup_GrassBug1,
   [SPECIES_UMBREON] = gGroup_Cave2,
   [SPECIES_WEEPINBELL] = gGroup_GrassBug3,
-  [SPECIES_ILLUMISE] = gGroup_GrassBug2,
+  [SPECIES_ILLUMISE] = gGroup_GrassBug1,
   [SPECIES_VICTREEBEL] = gGroup_Overworld2,
   [SPECIES_MURKROW] = gGroup_Spooky1,
   [SPECIES_ROSELIA] = gGroup_GrassBug2,
-  [SPECIES_TENTACOOL] = gGroup_WaterIce1,
   [SPECIES_SLOWKING] = gGroup_Overworld2,
   [SPECIES_GULPIN] = gGroup_Overworld1,
   [SPECIES_TENTACRUEL] = gGroup_WaterIce2,
@@ -739,38 +684,55 @@ const u16* const gMonGroups[] =
   [SPECIES_MIME_JR] = gGroup_EarlyBoost,
   [SPECIES_CARVANHA] = gGroup_WaterIce1,
   [SPECIES_GRAVELER] = gGroup_Cave2,
+  [SPECIES_BULBASAUR] = gGroup_GrassStarter1,
   [SPECIES_GOLEM] = gGroup_NotCatchable,
   [SPECIES_SHARPEDO] = gGroup_WaterIce2,
+  [SPECIES_CHIKORITA] = gGroup_GrassStarter1,
+  [SPECIES_IVYSAUR] = gGroup_GrassBug2,
   [SPECIES_PONYTA] = gGroup_Overworld1,
   [SPECIES_WAILMER] = gGroup_WaterIce1,
+  [SPECIES_VENUSAUR] = gGroup_GrassStarter3,
   [SPECIES_RAPIDASH] = gGroup_Overworld2,
   [SPECIES_WAILORD] = gGroup_WaterIce2,
+  [SPECIES_BAYLEEF] = gGroup_GrassBug2,
   [SPECIES_GIRAFARIG] = gGroup_Overworld1,
+  [SPECIES_CHARMANDER] = gGroup_FireStarter1,
   [SPECIES_SLOWPOKE] = gGroup_WaterIce1,
   [SPECIES_NUMEL] = gGroup_Overworld1,
+  [SPECIES_MEGANIUM] = gGroup_GrassStarter3,
   [SPECIES_PINECO] = gGroup_GrassBug1,
+  [SPECIES_CHARMELEON] = gGroup_Cave1,
   [SPECIES_SLOWBRO] = gGroup_WaterIce2,
   [SPECIES_CAMERUPT] = gGroup_Overworld2,
+  [SPECIES_CHARIZARD] = gGroup_FireStarter3,
   [SPECIES_MAGNEMITE] = gGroup_Urban1,
+  [SPECIES_CYNDAQUIL] = gGroup_FireStarter1,
   [SPECIES_FORRETRESS] = gGroup_GrassBug3,
   [SPECIES_TORKOAL] = gGroup_Overworld2,
+  [SPECIES_SQUIRTLE] = gGroup_WaterStarter1,
   [SPECIES_MAGNETON] = gGroup_Urban2,
+  [SPECIES_QUILAVA] = gGroup_Spooky1,
   [SPECIES_DUNSPARCE] = gGroup_Cave1,
   [SPECIES_SPOINK] = gGroup_Overworld1,
+  [SPECIES_WARTORTLE] = gGroup_WaterIce1,
   [SPECIES_FARFETCHD] = gGroup_NormalFlying1,
   [SPECIES_GRUMPIG] = gGroup_Overworld2,
   [SPECIES_MUNCHLAX] = gGroup_Overworld1,
+  [SPECIES_BLASTOISE] = gGroup_WaterStarter3,
   [SPECIES_DODUO] = gGroup_NormalFlying2,
-  [SPECIES_GLIGAR] = gGroup_Cave1,
+  [SPECIES_TYPHLOSION] = gGroup_FireStarter3,
   [SPECIES_DODRIO] = gGroup_NormalFlying2,
   [SPECIES_SPINDA] = gGroup_NormalFlying1,
+  [SPECIES_TOTODILE] = gGroup_WaterStarter1,
   [SPECIES_STEELIX] = gGroup_Spooky2,
   [SPECIES_SEEL] = gGroup_WaterIce1,
+  [SPECIES_CROCONAW] = gGroup_WaterIce1,
   [SPECIES_SNUBBULL] = gGroup_NormalFlying1,
   [SPECIES_DEWGONG] = gGroup_WaterIce2,
   [SPECIES_VIBRAVA] = gGroup_CeruleanCave,
   [SPECIES_GRIMER] = gGroup_Urban1,
   [SPECIES_FLYGON] = gGroup_NotCatchable,
+  [SPECIES_FERALIGATR] = gGroup_WaterStarter3,
   [SPECIES_GRANBULL] = gGroup_NormalFlying2,
   [SPECIES_MUK] = gGroup_Urban2,
   [SPECIES_CACNEA] = gGroup_GrassBug2,
@@ -788,7 +750,6 @@ const u16* const gMonGroups[] =
   [SPECIES_HERACROSS] = gGroup_GrassBug2,
   [SPECIES_ONIX] = gGroup_Spooky1,
   [SPECIES_SEVIPER] = gGroup_Overworld1,
-  [SPECIES_SNEASEL] = gGroup_Cave1,
   [SPECIES_DROWZEE] = gGroup_Overworld1,
   [SPECIES_LUNATONE] = gGroup_Spooky1,
   [SPECIES_HYPNO] = gGroup_Overworld2,
@@ -838,36 +799,45 @@ const u16* const gMonGroups[] =
   [SPECIES_ELECTIVIRE] = gGroup_Urban2,
   [SPECIES_RHYDON] = gGroup_Overworld2,
   [SPECIES_SKARMORY] = gGroup_NormalFlying2,
+  [SPECIES_TREECKO] = gGroup_GrassStarter1,
   [SPECIES_KECLEON] = gGroup_Overworld1,
   [SPECIES_CHANSEY] = gGroup_Overworld2,
+  [SPECIES_SHROOMISH] = gGroup_GrassBug2,
   [SPECIES_MAGMORTAR] = gGroup_Urban2,
   [SPECIES_TANGELA] = gGroup_GrassBug2,
+  [SPECIES_GROVYLE] = gGroup_GrassBug2,
   [SPECIES_SHUPPET] = gGroup_Spooky1,
   [SPECIES_HOUNDOUR] = gGroup_Overworld1,
   [SPECIES_TOGEKISS] = gGroup_NotCatchable,
   [SPECIES_KANGASKHAN] = gGroup_Overworld2,
-  [SPECIES_BANETTE] = gGroup_Spooky2,
+  [SPECIES_SCEPTILE] = gGroup_GrassStarter3,
+  [SPECIES_BANETTE] = gGroup_Spooky1,
   [SPECIES_HOUNDOOM] = gGroup_Overworld2,
   [SPECIES_HORSEA] = gGroup_WaterIce1,
   [SPECIES_YANMEGA] = gGroup_GrassBug3,
+  [SPECIES_TORCHIC] = gGroup_FireStarter1,
   [SPECIES_DUSKULL] = gGroup_Spooky1,
   [SPECIES_SEADRA] = gGroup_WaterIce2,
   [SPECIES_KINGDRA] = gGroup_NotCatchable,
+  [SPECIES_COMBUSKEN] = gGroup_Urban1,
   [SPECIES_DUSCLOPS] = gGroup_Spooky2,
   [SPECIES_LEAFEON] = gGroup_GrassBug3,
   [SPECIES_GOLDEEN] = gGroup_WaterIce1,
   [SPECIES_PHANPY] = gGroup_Overworld1,
+  [SPECIES_BLAZIKEN] = gGroup_FireStarter3,
   [SPECIES_TROPIUS] = gGroup_Overworld1,
   [SPECIES_GLACEON] = gGroup_WaterIce2,
   [SPECIES_SEAKING] = gGroup_WaterIce2,
+  [SPECIES_MUDKIP] = gGroup_WaterStarter1,
   [SPECIES_CHIMECHO] = gGroup_Overworld1,
   [SPECIES_DONPHAN] = gGroup_Overworld2,
   [SPECIES_STARYU] = gGroup_WaterIce1,
   [SPECIES_GLISCOR] = gGroup_NotCatchable,
+  [SPECIES_MARSHTOMP] = gGroup_WaterIce1,
   [SPECIES_ABSOL] = gGroup_Overworld1,
-  [SPECIES_STARMIE] = gGroup_WaterIce2,
   [SPECIES_PORYGON2] = gGroup_Urban2,
   [SPECIES_MAMOSWINE] = gGroup_NotCatchable,
+  [SPECIES_SWAMPERT] = gGroup_WaterStarter3,
   [SPECIES_MR_MIME] = gGroup_Urban1,
   [SPECIES_STANTLER] = gGroup_NormalFlying1,
   [SPECIES_SCYTHER] = gGroup_GrassBug2,
@@ -906,10 +876,17 @@ const u16* const gMonGroups[] =
   [SPECIES_BLISSEY] = gGroup_NotCatchable,
   [SPECIES_JOLTEON] = gGroup_Urban2,
   [SPECIES_SHELGON] = gGroup_CeruleanCave,
+  [SPECIES_CLEFAIRY] = gGroup_Spooky1,
+  [SPECIES_ABRA] = gGroup_Overworld1,
   [SPECIES_MACHOP] = gGroup_Cave1,
+  [SPECIES_TENTACOOL] = gGroup_WaterIce1,
   [SPECIES_GASTLY] = gGroup_Spooky1,
+  [SPECIES_STARMIE] = gGroup_WaterIce2,
+  [SPECIES_CLEFFA] = gGroup_EarlyBoost,
   [SPECIES_TOGEPI] = gGroup_Urban1,
   [SPECIES_TOGETIC] = gGroup_Urban2,
+  [SPECIES_GLIGAR] = gGroup_Cave1,
+  [SPECIES_SNEASEL] = gGroup_Cave1,
   [SPECIES_TRAPINCH] = gGroup_Overworld1,
   [SPECIES_HAPPINY] = gGroup_Overworld1,
   [SPECIES_FLAREON] = gGroup_Urban2,
@@ -927,9 +904,6 @@ const u16* const gMonGroups[] =
   [SPECIES_AERODACTYL] = gGroup_Spooky1,
   [SPECIES_TYRANITAR] = gGroup_NotCatchable,
   [SPECIES_SNORLAX] = gGroup_Overworld2,
-  [SPECIES_ARTICUNO] = gGroup_Legendary,
-  [SPECIES_ZAPDOS] = gGroup_Legendary,
-  [SPECIES_MOLTRES] = gGroup_Legendary,
   [SPECIES_DRATINI] = gGroup_WaterIce1,
   [SPECIES_DRAGONAIR] = gGroup_CeruleanCave,
   [SPECIES_DRAGONITE] = gGroup_NotCatchable,
