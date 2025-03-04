@@ -50,13 +50,10 @@ u32 GameHash() {
 
 bool8 IsStarterGroup(const u16 * group) {
   if ((group == gGroup_GrassStarter1) ||
-      (group == gGroup_GrassStarter2) ||
       (group == gGroup_GrassStarter3) ||
       (group == gGroup_FireStarter1) ||
-      (group == gGroup_FireStarter2) ||
       (group == gGroup_FireStarter3) ||
       (group == gGroup_WaterStarter1) ||
-      (group == gGroup_WaterStarter2) ||
       (group == gGroup_WaterStarter3)) {
 	  return TRUE;
   }
