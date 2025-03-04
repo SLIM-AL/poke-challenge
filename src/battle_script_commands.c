@@ -3273,22 +3273,32 @@ static void Cmd_getexp(void)
 
                     checkLevelCapResult = CheckLevelCap(gPlayerParty[gBattleStruct->expGetterMonId].level);
                     if (checkLevelCapResult == AT_CAP) {
-                        // Zero out EXP, and print the level cap string.
-                        gBattleMoveDamage = 0;
+                        u16 species = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPECIES);
+                        u8 level = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL);
+                        u32 currExp = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_EXP);
+                        u32 nextLvlExp = gExperienceTables[gSpeciesInfo[species].growthRate][level + 1];
+                        u32 neededExp = nextLvlExp - currExp;
+
+                        if (gBattleMoveDamage > neededExp) {
+                            gBattleMoveDamage = neededExp - 1;
+                        }
                         PrepareStringBattle(STRINGID_PKMNGAINEDNOEXPOVERLEVELED, gBattleStruct->expGetterBattlerId);
                     } else {
-                        if ((gSaveBlock2Ptr->optionsCapWarning == OPTIONS_CAP_WARNING_ON) && (checkLevelCapResult == AT_NEXT_BADGE_CAP) && (gPlayerParty[gBattleStruct->expGetterMonId].level > 9)) {
-                          PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff3, 5, gBattleMoveDamage);
-                          PrepareStringBattle(STRINGID_PKMNGAINEDEXPATNEXTBADGECAP, gBattleStruct->expGetterBattlerId);
-                        } else if (checkLevelCapResult == ONE_AWAY_FROM_CAP) {
+                        if (checkLevelCapResult == ONE_AWAY_FROM_CAP) {
                           PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff3, 5, gBattleMoveDamage);
                           PrepareStringBattle(STRINGID_PKMNGAINEDEXPALMOSTATCAP, gBattleStruct->expGetterBattlerId);
+                        }
+                        else if (gSaveBlock2Ptr->optionsCapWarning == OPTIONS_CAP_WARNING_ON && checkLevelCapResult == AT_NEXT_BADGE_CAP && gPlayerParty[gBattleStruct->expGetterMonId].level > 9) {
+                          PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff3, 5, gBattleMoveDamage);
+                          PrepareStringBattle(STRINGID_PKMNGAINEDEXPATNEXTBADGECAP, gBattleStruct->expGetterBattlerId);
                         } else {
                           // buffer 'gained' or 'gained a boosted'
                           PREPARE_STRING_BUFFER(gBattleTextBuff2, i);
                           PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff3, 5, gBattleMoveDamage);
                           PrepareStringBattle(STRINGID_PKMNGAINEDEXP, gBattleStruct->expGetterBattlerId);
                         }
+                    }
+                    if (gBattleMoveDamage > 0) {
                         MonGainEVs(&gPlayerParty[gBattleStruct->expGetterMonId], gBattleMons[gBattlerFainted].species);
                     }
                 }
@@ -3925,11 +3935,10 @@ static void Cmd_playanimation_var(void)
     argumentPtr = T2_READ_PTR(gBattlescriptCurrInstr + 6);
 
     if (*animationIdPtr == B_ANIM_STATS_CHANGE
-     || *animationIdPtr == B_ANIM_SNATCH_MOVE
-     || *animationIdPtr == B_ANIM_SUBSTITUTE_FADE)
+     || *animationIdPtr == B_ANIM_SNATCH_MOVE)
     {
-        BtlController_EmitBattleAnimation(BUFFER_A, *animationIdPtr, *argumentPtr);
-        MarkBattlerForControllerExec(gActiveBattler);
+        // BtlController_EmitBattleAnimation(BUFFER_A, *animationIdPtr, *argumentPtr);
+        // MarkBattlerForControllerExec(gActiveBattler);
         gBattlescriptCurrInstr += 10;
     }
     else if (gHitMarker & HITMARKER_NO_ANIMATIONS)
@@ -4067,8 +4076,8 @@ static void Cmd_playstatchangeanimation(void)
     }
     else if (changeableStatsCount != 0 && !gBattleScripting.statAnimPlayed)
     {
-        BtlController_EmitBattleAnimation(BUFFER_A, B_ANIM_STATS_CHANGE, statAnimId);
-        MarkBattlerForControllerExec(gActiveBattler);
+        // BtlController_EmitBattleAnimation(BUFFER_A, B_ANIM_STATS_CHANGE, statAnimId);
+        // MarkBattlerForControllerExec(gActiveBattler);
         if (gBattlescriptCurrInstr[3] & STAT_CHANGE_MULTIPLE_STATS && changeableStatsCount > 1)
             gBattleScripting.statAnimPlayed = TRUE;
         gBattlescriptCurrInstr += 4;
