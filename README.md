@@ -68,7 +68,6 @@ Other changes:
  - Player gets 10x the number of steps in the Safari Zone.
  - Shiny Pokémon odds are increased 10x.
  - Party menu shortcut for giving/taking Exp Shares.
- - The Arena Trap ability has been removed from the game.
  - Safari Balls are 53% more effective, which makes them 15% more effective than Ultra Balls.
  - Pewter, Cerulean, and Vermillion Marts sell Revives.
  - Celadon Mart sells Ultra Balls.
@@ -208,8 +207,8 @@ The list of map sets is below. Any map that isn't in this list is in its own map
 - Mt. Moon 1F, B1F, B2F
 - Rock Tunnel 1F, B1F
 - Diglett's Cave North Entrace, South Entrance, B1F
-- Pokémon Tower 4F, 5F, 6F
-- Pokémon Tower 7F, 8F
+- Pokémon Tower 3F, 4F, 5F
+- Pokémon Tower 6F, 7F
 - Pokémon Mansion 1F, B1F
 - Pokémon Mansion 2F, 3F
 - Seafoam Islands 1F, B1F, B2F
