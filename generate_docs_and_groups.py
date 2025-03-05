@@ -211,10 +211,10 @@ pokes = [
   ('OMANYTE', 'WaterIce1'),
   ('OMASTAR', 'WaterIce2'),
 
-  ('KABUTO', 'WaterIce1'),
-  ('KABUTOPS', 'WaterIce2'),
+  ('KABUTO', 'Spooky1'),
+  ('KABUTOPS', 'Spooky2'),
 
-  ('AERODACTYL', 'Spooky1'),
+  ('AERODACTYL', 'NormalFlying2'),
 
   ('SNORLAX', 'Overworld2'),
 
@@ -275,8 +275,8 @@ pokes = [
 
   ('BELLOSSOM', 'Overworld2'),
 
-  ('MARILL', 'Overworld1'),
-  ('AZUMARILL', 'Overworld2'),
+  ('MARILL', 'WaterIce1'),
+  ('AZUMARILL', 'WaterIce2'),
 
   ('SUDOWOODO', 'Overworld1'),
 
@@ -414,7 +414,7 @@ pokes = [
   ('WURMPLE', 'GrassBug1'),
   ('SILCOON', 'GrassBug1'),
   ('BEAUTIFLY', 'GrassBug3'),
-  ('CASCOON', 'Cave1'),
+  ('CASCOON', 'Spooky1'),
   ('DUSTOX', 'GrassBug3'),
 
   ('LOTAD', 'GrassBug2'),
@@ -547,7 +547,7 @@ pokes = [
   ('KECLEON', 'Overworld1'),
 
   ('SHUPPET', 'Spooky1'),
-  ('BANETTE', 'Spooky1'),
+  ('BANETTE', 'Spooky2'),
 
   ('DUSKULL', 'Spooky1'),
   ('DUSCLOPS', 'Spooky2'),
