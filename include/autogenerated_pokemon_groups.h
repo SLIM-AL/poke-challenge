@@ -9,34 +9,30 @@
 #include "data.h"
 #include "global.h"
 
-extern const u16 gGroup_EarlyBoost[18];
-extern const u16 gGroup_NormalFlying1[19];
+extern const u16 gGroup_EarlyBoost[19];
+extern const u16 gGroup_NormalFlying1[18];
 extern const u16 gGroup_NormalFlying2[17];
 extern const u16 gGroup_Cave1[21];
-extern const u16 gGroup_Cave2[20];
-extern const u16 gGroup_GrassBug1[14];
-extern const u16 gGroup_GrassBug2[21];
-extern const u16 gGroup_GrassBug3[19];
-extern const u16 gGroup_Spooky1[17];
-extern const u16 gGroup_Spooky2[13];
-extern const u16 gGroup_Urban1[16];
+extern const u16 gGroup_Cave2[16];
+extern const u16 gGroup_GrassBug1[15];
+extern const u16 gGroup_GrassBug2[23];
+extern const u16 gGroup_GrassBug3[17];
+extern const u16 gGroup_Spooky1[20];
+extern const u16 gGroup_Spooky2[16];
+extern const u16 gGroup_Urban1[17];
 extern const u16 gGroup_Urban2[12];
-extern const u16 gGroup_WaterIce1[32];
-extern const u16 gGroup_WaterIce2[30];
-extern const u16 gGroup_Overworld[37];
-extern const u16 gGroup_SafariZone[48];
+extern const u16 gGroup_WaterIce1[34];
+extern const u16 gGroup_WaterIce2[27];
+extern const u16 gGroup_Overworld1[36];
+extern const u16 gGroup_Overworld2[48];
 extern const u16 gGroup_CeruleanCave[6];
-extern const u16 gGroup_NotCatchable[23];
-extern const u16 gGroup_Legendary[4];
-extern const u16 gGroup_GrassStarter1[4];
-extern const u16 gGroup_GrassStarter2[4];
+extern const u16 gGroup_NotCatchable[30];
 extern const u16 gGroup_GrassStarter3[4];
-extern const u16 gGroup_FireStarter1[4];
-extern const u16 gGroup_FireStarter2[4];
 extern const u16 gGroup_FireStarter3[4];
-extern const u16 gGroup_WaterStarter1[4];
-extern const u16 gGroup_WaterStarter2[4];
 extern const u16 gGroup_WaterStarter3[4];
+extern const u16 gGroup_GrassStarter1[4];
+extern const u16 gGroup_FireStarter1[4];
+extern const u16 gGroup_WaterStarter1[4];
 extern const u16* const gMonGroups[651];
 
 #endif
