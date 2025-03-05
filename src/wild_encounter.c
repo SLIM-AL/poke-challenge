@@ -252,18 +252,10 @@ u8 GetUnownLetterByPersonalityLoByte(u32 personality)
     return GET_UNOWN_LETTER(personality);
 }
 
-enum
-{
-    WILD_AREA_LAND,
-    WILD_AREA_WATER,
-    WILD_AREA_ROCKS,
-    WILD_AREA_FISHING,
-};
-
 #define WILD_CHECK_REPEL    0x1
 #define WILD_CHECK_KEEN_EYE 0x2
 
-const u8 sLandSlots[12] = {
+const u8 sEncounterChanceLandSlots[12] = {
   ENCOUNTER_CHANCE_LAND_MONS_SLOT_0,
   ENCOUNTER_CHANCE_LAND_MONS_SLOT_1,
   ENCOUNTER_CHANCE_LAND_MONS_SLOT_2,
@@ -278,7 +270,7 @@ const u8 sLandSlots[12] = {
   ENCOUNTER_CHANCE_LAND_MONS_SLOT_11,
 };
 
-const u8 sWaterSlots[5] = {
+const u8 sEncounterChanceWaterRockSmashSlots[5] = {
   ENCOUNTER_CHANCE_WATER_MONS_SLOT_0,
   ENCOUNTER_CHANCE_WATER_MONS_SLOT_1,
   ENCOUNTER_CHANCE_WATER_MONS_SLOT_2,
@@ -286,22 +278,43 @@ const u8 sWaterSlots[5] = {
   ENCOUNTER_CHANCE_WATER_MONS_SLOT_4,
 };
 
+u16 GetWildMonEncounterRate(const struct WildPokemonInfo* info, u8 area, u16 species) {
+  u8 encounterRate = 0;
+  u8 curr = 0;
+  u8 last = 0;
+  u8 i;
+
+  if (area == WILD_AREA_LAND) {
+    for (i = 0; i < 12; ++i) {
+      curr = sEncounterChanceLandSlots[i];
+      if (info->wildPokemon[i].species == species) {
+        encounterRate += curr - last;
+      }
+      last = curr;
+    }
+  } else {
+    for (i = 0; i < 5; ++i) {
+      curr = sEncounterChanceWaterRockSmashSlots[i];
+      if (info->wildPokemon[i].species == species) {
+        encounterRate += curr - last;
+      }
+      last = curr;
+    }
+  }
+
+  return encounterRate;
+}
+
 static bool8 TryGenerateWildMon(const struct WildPokemonInfo * info, u8 area, u8 flags)
 {
     u8 slot = 0;
     u8 level;
-    bool8 isLand = FALSE;
-
     u8 encounterRate = 0;
-    u8 curr = 0;
-    u8 last = 0;
-    u8 i;
 
     switch (area)
     {
     case WILD_AREA_LAND:
         slot = ChooseWildMonIndex_Land();
-        isLand = TRUE;
         break;
     case WILD_AREA_WATER:
         slot = ChooseWildMonIndex_WaterRock();
@@ -316,24 +329,7 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo * info, u8 area, u8
         return FALSE;
     }
 
-    if (isLand) {
-      for (i = 0; i < 12; ++i) {
-        curr = sLandSlots[i];
-        if (info->wildPokemon[i].species == info->wildPokemon[slot].species) {
-          encounterRate += curr - last;
-        }
-        last = curr;
-      }
-    } else {
-      for (i = 0; i < 5; ++i) {
-        curr = sWaterSlots[i];
-        if (info->wildPokemon[i].species == info->wildPokemon[slot].species) {
-          encounterRate += curr - last;
-        }
-        last = curr;
-      }
-    }
-
+    encounterRate = GetWildMonEncounterRate(info, area, info->wildPokemon[slot].species);
     GenerateWildMon(info->wildPokemon[slot].species, level, slot, encounterRate);
     return TRUE;
 }

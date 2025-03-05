@@ -20,6 +20,7 @@
 #include "constants/sound.h"
 #include "pokedex_area_markers.h"
 #include "field_specials.h"
+#include "play_time.h"
 
 #define TAG_AREA_MARKERS 2001
 
@@ -1279,6 +1280,7 @@ static void DexScreen_InitGfxForNumericalOrderList(void)
     DexScreen_PrintControlInfo(gText_PickOKExit);
     CopyWindowToVram(0, COPYWIN_GFX);
     CopyWindowToVram(1, COPYWIN_GFX);
+    PlayTimeCounter_Start();
 }
 
 static void Task_DexScreen_CharacteristicOrder(u8 taskId)
