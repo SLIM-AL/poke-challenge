@@ -1038,7 +1038,7 @@ static s32 GetPartyMaxLevel(void)
         }
     }
 
-    return topLevel;
+    return topLevel + 10;
 }
 
 static void ValidateOrResetCurTrainerTowerRecord(void)
