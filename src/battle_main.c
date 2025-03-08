@@ -3817,10 +3817,10 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
     if (!gPaletteFade.active)
     {
         ResetSpriteData();
-        if (gLeveledUpInBattle == 0 || gBattleOutcome != B_OUTCOME_WON)
-            gBattleMainFunc = ReturnFromBattleToOverworld;
-        else
+        if (gLeveledUpInBattle > 0 && (gBattleOutcome == B_OUTCOME_WON || gBattleOutcome == B_OUTCOME_CAUGHT))
             gBattleMainFunc = TryEvolvePokemon;
+        else
+            gBattleMainFunc = ReturnFromBattleToOverworld;
         FreeAllWindowBuffers();
         if (!(gBattleTypeFlags & BATTLE_TYPE_LINK))
         {

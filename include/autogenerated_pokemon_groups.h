@@ -33,6 +33,55 @@ extern const u16 gGroup_WaterStarter3[4];
 extern const u16 gGroup_GrassStarter1[4];
 extern const u16 gGroup_FireStarter1[4];
 extern const u16 gGroup_WaterStarter1[4];
+
 extern const u16* const gMonGroups[651];
+extern const u16* gGroupPtrs[21];
+extern const u8* const gGroupNamePtrs[21];
+
+extern const u8 gEarlyBoostName[];
+extern const u8 gNormalFlying1Name[];
+extern const u8 gNormalFlying2Name[];
+extern const u8 gCave1Name[];
+extern const u8 gCave2Name[];
+extern const u8 gGrassBug1Name[];
+extern const u8 gGrassBug2Name[];
+extern const u8 gGrassBug3Name[];
+extern const u8 gSpooky1Name[];
+extern const u8 gSpooky2Name[];
+extern const u8 gUrban1Name[];
+extern const u8 gUrban2Name[];
+extern const u8 gWaterIce1Name[];
+extern const u8 gWaterIce2Name[];
+extern const u8 gOverworld1Name[];
+extern const u8 gOverworld2Name[];
+extern const u8 gCeruleanCaveName[];
+extern const u8 gNotCatchableName[];
+extern const u8 gGrassStarter3Name[];
+extern const u8 gFireStarter3Name[];
+extern const u8 gWaterStarter3Name[];
+
+
+#define DEX_GROUP_ITEMS() \
+{gEarlyBoostName, 0},\
+{gNormalFlying1Name, 1},\
+{gNormalFlying2Name, 2},\
+{gCave1Name, 3},\
+{gCave2Name, 4},\
+{gGrassBug1Name, 5},\
+{gGrassBug2Name, 6},\
+{gGrassBug3Name, 7},\
+{gSpooky1Name, 8},\
+{gSpooky2Name, 9},\
+{gUrban1Name, 10},\
+{gUrban2Name, 11},\
+{gWaterIce1Name, 12},\
+{gWaterIce2Name, 13},\
+{gOverworld1Name, 14},\
+{gOverworld2Name, 15},\
+{gCeruleanCaveName, 16},\
+{gNotCatchableName, 17},\
+{gGrassStarter3Name, 18},\
+{gFireStarter3Name, 19},\
+{gWaterStarter3Name, 20},\
 
 #endif

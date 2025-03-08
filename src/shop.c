@@ -31,6 +31,7 @@
 #include "constants/items.h"
 #include "constants/game_stat.h"
 #include "constants/field_weather.h"
+#include "play_time.h"
 
 #define tItemCount data[1]
 #define tItemId data[5]
@@ -205,6 +206,8 @@ static const struct BgTemplate sShopBuyMenuBgTemplates[4] =
 // Functions
 static u8 CreateShopMenu(u8 martType)
 {
+    PlayTimeCounter_Stop();
+
     sShopData.martType = GetMartTypeFromItemList(martType);
     sShopData.selectedRow = 0;
     if (ContextNpcGetTextColor() == NPC_TEXT_COLOR_MALE)
@@ -1050,6 +1053,7 @@ static void Task_ExitBuyMenu(u8 taskId)
         BuyMenuFreeMemory();
         SetMainCallback2(CB2_ReturnToField);
         DestroyTask(taskId);
+        PlayTimeCounter_Start();
     }
 }
 

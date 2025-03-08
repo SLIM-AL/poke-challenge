@@ -114,6 +114,11 @@ TrainerTower_Lobby_EventScript_Receptionist::
 	msgbox TrainerTower_Lobby_Text_GiveItYourBest
 	goto TrainerTower_Lobby_EventScript_ReceptionistEnd
 
+
+TrainerTower_Lobby_EventScript_ReceptionistChallengeNotOver::
+	msgbox TrainerTower_Lobby_Text_ChallengeNotOver
+	goto TrainerTower_Lobby_EventScript_DeclineChallenge
+
 TrainerTower_Lobby_EventScript_ThanksForCompeting::
 	msgbox TrainerTower_Lobby_Text_ThanksForCompeting
 TrainerTower_Lobby_EventScript_ReceptionistEnd::
@@ -151,6 +156,7 @@ TrainerTower_Lobby_EventScript_EntryTrigger::
 	applymovement OBJ_EVENT_ID_PLAYER, TrainerTower_Lobby_Movement_FaceReceptionist
 	textcolor NPC_TEXT_COLOR_FEMALE
 	msgbox TrainerTower_Lobby_Text_WelcomeToTrainerTower
+	goto_if_set FLAG_CHALLENGE_NOT_OVER TrainerTower_Lobby_EventScript_ReceptionistChallengeNotOver
 	ttower_getnumfloors
 	goto_if_eq VAR_RESULT, FALSE, TrainerTower_Lobby_EventScript_AllFloorsUsed
 	msgbox TrainerTower_Lobby_Text_TrainersUpToFloorNum
