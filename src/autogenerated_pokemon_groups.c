@@ -518,6 +518,87 @@ const u16 gGroup_WaterStarter1[] =
   SPECIES_MUDKIP,
 };
 
+const u16* gGroupPtrs[24] =
+{
+  gGroup_EarlyBoost,
+  gGroup_NormalFlying1,
+  gGroup_NormalFlying2,
+  gGroup_Cave1,
+  gGroup_Cave2,
+  gGroup_GrassBug1,
+  gGroup_GrassBug2,
+  gGroup_GrassBug3,
+  gGroup_Spooky1,
+  gGroup_Spooky2,
+  gGroup_Urban1,
+  gGroup_Urban2,
+  gGroup_WaterIce1,
+  gGroup_WaterIce2,
+  gGroup_Overworld1,
+  gGroup_Overworld2,
+  gGroup_CeruleanCave,
+  gGroup_NotCatchable,
+  gGroup_GrassStarter3,
+  gGroup_FireStarter3,
+  gGroup_WaterStarter3,
+  gGroup_GrassStarter1,
+  gGroup_FireStarter1,
+  gGroup_WaterStarter1,
+};
+
+const u8 gEarlyBoostName[] = _("EarlyBoost POKéMON");
+const u8 gNormalFlying1Name[] = _("NormalFlying1 POKéMON");
+const u8 gNormalFlying2Name[] = _("NormalFlying2 POKéMON");
+const u8 gCave1Name[] = _("Cave1 POKéMON");
+const u8 gCave2Name[] = _("Cave2 POKéMON");
+const u8 gGrassBug1Name[] = _("GrassBug1 POKéMON");
+const u8 gGrassBug2Name[] = _("GrassBug2 POKéMON");
+const u8 gGrassBug3Name[] = _("GrassBug3 POKéMON");
+const u8 gSpooky1Name[] = _("Spooky1 POKéMON");
+const u8 gSpooky2Name[] = _("Spooky2 POKéMON");
+const u8 gUrban1Name[] = _("Urban1 POKéMON");
+const u8 gUrban2Name[] = _("Urban2 POKéMON");
+const u8 gWaterIce1Name[] = _("WaterIce1 POKéMON");
+const u8 gWaterIce2Name[] = _("WaterIce2 POKéMON");
+const u8 gOverworld1Name[] = _("Overworld1 POKéMON");
+const u8 gOverworld2Name[] = _("Overworld2 POKéMON");
+const u8 gCeruleanCaveName[] = _("CeruleanCave POKéMON");
+const u8 gNotCatchableName[] = _("NotCatchable POKéMON");
+const u8 gGrassStarter3Name[] = _("GrassStarter3 POKéMON");
+const u8 gFireStarter3Name[] = _("FireStarter3 POKéMON");
+const u8 gWaterStarter3Name[] = _("WaterStarter3 POKéMON");
+const u8 gGrassStarter1Name[] = _("GrassStarter1 POKéMON");
+const u8 gFireStarter1Name[] = _("FireStarter1 POKéMON");
+const u8 gWaterStarter1Name[] = _("WaterStarter1 POKéMON");
+
+const u8* const gGroupNamePtrs[24] =
+{
+  gEarlyBoostName,
+  gNormalFlying1Name,
+  gNormalFlying2Name,
+  gCave1Name,
+  gCave2Name,
+  gGrassBug1Name,
+  gGrassBug2Name,
+  gGrassBug3Name,
+  gSpooky1Name,
+  gSpooky2Name,
+  gUrban1Name,
+  gUrban2Name,
+  gWaterIce1Name,
+  gWaterIce2Name,
+  gOverworld1Name,
+  gOverworld2Name,
+  gCeruleanCaveName,
+  gNotCatchableName,
+  gGrassStarter3Name,
+  gFireStarter3Name,
+  gWaterStarter3Name,
+  gGrassStarter1Name,
+  gFireStarter1Name,
+  gWaterStarter1Name,
+};
+
 const u16* const gMonGroups[] =
 {
   [SPECIES_NONE] = NULL,
