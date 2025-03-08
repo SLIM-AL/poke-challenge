@@ -58,8 +58,8 @@ ViridianForest_Text_CharlieIntro::
     .string "Did you know that POKéMON evolve?$"
 
 ViridianForest_Text_CharlieDefeat::
-    .string "Oh!\n"
-    .string "I lost!$"
+    .string "I found the evolution\n"
+    .string "bug in this game!$"
 
 ViridianForest_Text_CharliePostBattle::
     .string "BUG POKéMON evolve quickly.\n"
