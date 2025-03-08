@@ -45,7 +45,7 @@ void ExitSafariMode(void)
 
 bool8 MaybeEndChallenge(void) {
   u16 i;
-  u16 limit = 0;
+  u16 limit = 5;
   if ((gSaveBlock2Ptr->playTimeHours >= limit && FlagGet(FLAG_CHALLENGE_NOT_OVER))
       // Player can only walk in IndoorCeladon and SpecialAreas once time is up.
       || (gSaveBlock1Ptr->location.mapGroup != 10 && gSaveBlock1Ptr->location.mapGroup != 2 && !FlagGet(FLAG_CHALLENGE_NOT_OVER)))
