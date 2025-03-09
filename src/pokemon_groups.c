@@ -113,6 +113,27 @@ u32 MapHashInternal(bool8 fine) {
       else if (map == MAP_MT_EMBER_SUMMIT_PATH_2F || map == MAP_MT_EMBER_SUMMIT_PATH_3F) {
         coarseMap = MAP_MT_EMBER_SUMMIT_PATH_1F;
       }
+
+      // Pallet-Cinnabar.
+      else if (map == MAP_PALLET_TOWN || map == MAP_ROUTE21_NORTH || map == MAP_ROUTE21_SOUTH || map == MAP_CINNABAR_ISLAND) {
+        coarseMap = MAP_ROUTE21_NORTH;
+      }
+
+      // Route19-Route20.
+      else if (map == MAP_ROUTE19 || map == MAP_ROUTE20) {
+        coarseMap = MAP_ROUTE19;
+      }
+
+      // Route12-Route13.
+      else if (map == MAP_ROUTE12 || map == MAP_ROUTE13) {
+        coarseMap = MAP_ROUTE12;
+      }
+
+      // Vermilion-Route11.
+      else if (map == MAP_VERMILION_CITY || map == MAP_ROUTE11) {
+        coarseMap = MAP_ROUTE11;
+      }
+
       // Ruby path is post game so is excluded.
     }
 
