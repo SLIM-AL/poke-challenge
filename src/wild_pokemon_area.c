@@ -366,13 +366,19 @@ static bool32 IsSpeciesPossiblyInEncounterTable(const struct WildPokemonHeader *
 
 static bool32 IsSpeciesInEncounterTable(const struct WildPokemonHeader * data, const struct WildPokemonInfo * info, s32 species, s32 count, u8 area)
 {
+
+    if (!IsSpeciesPossiblyInEncounterTable(data, info, species, count, area))
+    {
+        return FALSE;
+    }
+
     s32 i;
-    s32 lastSpecies = 0;
+    s32 prevSpecies = 0;
     if (info != NULL)
     {
         for (i = 0; i < count; i++)
         {
-            if (species == lastSpecies)
+            if (info->wildPokemon[i].species == prevSpecies)
             {
                 continue;
             }
@@ -388,7 +394,7 @@ static bool32 IsSpeciesInEncounterTable(const struct WildPokemonHeader * data, c
             {
                 return TRUE;
             }
-            lastSpecies = species;
+            prevSpecies = info->wildPokemon[i].species;
         }
     }
     return FALSE;

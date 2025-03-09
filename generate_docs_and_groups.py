@@ -953,6 +953,7 @@ Other changes:
  - Faster movement, animations, and text. Hold B to use normal walking speed.
  - Start the game with balls, healing items, the Old Rod, 6 Exp Shares, and more.
  - L button maps to A button. In battles, L button auto-fires A and holding R automatically runs away.
+ - Holding SELECT plays audio notifications when the clock is running. This can be used to double check in which menus the clock is stopped. It plays alternating pitches every half second, and the save sound every time the clock advances one minute.
  - Gain experience for catching Pokémon.
  - Oak's aides give large sums of money for completing the Pokédex. You can find them in the Department Store and their original locations. The rewards are as follows:
    - 500 for 1 unique species.
@@ -1008,6 +1009,7 @@ Other changes:
  - Celadon Mart sells Ultra Balls.
  - All Pokémon that aren't normally catchable in the Safari Zone have a Safari Zone [flee rate](https://bulbapedia.bulbagarden.net/wiki/Kanto_Safari_Zone) of 75 (base 25% chance of fleeing).
  - Some early events are skipped; e.g. the Old Man.
+ - Some moves have been updated to reflect their Gen IV properties (e.g. Dig's power increase).
  - Slightly modified wild encounters:
    - Dragonair -> Seadra
    - Wobbuffet -> Dragonair

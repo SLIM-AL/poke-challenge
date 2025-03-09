@@ -986,4 +986,3 @@ const u16* const gMonGroups[] =
   [SPECIES_DRAGONAIR] = gGroup_CeruleanCave,
   [SPECIES_DRAGONITE] = gGroup_NotCatchable,
 };
-
