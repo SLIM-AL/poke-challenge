@@ -90,7 +90,6 @@ PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei::
   setvar VAR_ELITE_FOUR_MEMBERS_BEATEN 1
   giveitem ITEM_RARE_CANDY
   giveitem ITEM_NATURE_MINT
-  giveitem ITEM_ABILITY_PATCH
   goto PokemonLeague_LoreleisRoom_EventScript_DefeatedLoreleiAgain
 
 PokemonLeague_LoreleisRoom_EventScript_DefeatedLoreleiAgain::

@@ -50,13 +50,10 @@ u32 GameHash() {
 
 bool8 IsStarterGroup(const u16 * group) {
   if ((group == gGroup_GrassStarter1) ||
-      (group == gGroup_GrassStarter2) ||
       (group == gGroup_GrassStarter3) ||
       (group == gGroup_FireStarter1) ||
-      (group == gGroup_FireStarter2) ||
       (group == gGroup_FireStarter3) ||
       (group == gGroup_WaterStarter1) ||
-      (group == gGroup_WaterStarter2) ||
       (group == gGroup_WaterStarter3)) {
 	  return TRUE;
   }
@@ -127,6 +124,27 @@ u32 MapHashFromMapId(bool8 fine, u8 mapGroup, u8 mapNum) {
       else if (map == MAP_MT_EMBER_SUMMIT_PATH_2F || map == MAP_MT_EMBER_SUMMIT_PATH_3F) {
         coarseMap = MAP_MT_EMBER_SUMMIT_PATH_1F;
       }
+
+      // Pallet-Cinnabar.
+      else if (map == MAP_PALLET_TOWN || map == MAP_ROUTE21_NORTH || map == MAP_ROUTE21_SOUTH || map == MAP_CINNABAR_ISLAND) {
+        coarseMap = MAP_ROUTE21_NORTH;
+      }
+
+      // Route19-Route20.
+      else if (map == MAP_ROUTE19 || map == MAP_ROUTE20) {
+        coarseMap = MAP_ROUTE19;
+      }
+
+      // Route12-Route13.
+      else if (map == MAP_ROUTE12 || map == MAP_ROUTE13) {
+        coarseMap = MAP_ROUTE12;
+      }
+
+      // Vermilion-Route11.
+      else if (map == MAP_VERMILION_CITY || map == MAP_ROUTE11) {
+        coarseMap = MAP_ROUTE11;
+      }
+
       // Ruby path is post game so is excluded.
     }
 
@@ -171,11 +189,11 @@ u16 GetSpeciesFromGroup(u16 species, u16 randInput) {
 
   group = gMonGroups[species];
 
-  // if this is a starter, just use the game hash.
+  // If this is a starter, just use the game hash.
   if (IsStarterGroup(group)) {
-    // int divide by 3 to preserve evolution chain.
+    // Int divide by 3 to preserve evolution chain.
     //
-    // don't take route into account, so that rival
+    // Don't take route into account, so that rival
     // has the same starter throughout the game.
     combinedHash = HashCombine(GameHash(), Hash(gSpeciesNames[(species + 2) / 3]));
     return IndexInto(group, combinedHash);

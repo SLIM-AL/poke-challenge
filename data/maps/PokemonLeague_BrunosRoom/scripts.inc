@@ -92,7 +92,6 @@ PokemonLeague_BrunosRoom_EventScript_DefeatedBruno::
   setvar VAR_ELITE_FOUR_MEMBERS_BEATEN 2
   giveitem ITEM_RARE_CANDY
   giveitem ITEM_NATURE_MINT
-  giveitem ITEM_ABILITY_PATCH
   goto PokemonLeague_BrunosRoom_EventScript_DefeatedBrunoAgain
 
 PokemonLeague_BrunosRoom_EventScript_DefeatedBrunoAgain::
