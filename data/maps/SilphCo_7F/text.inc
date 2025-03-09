@@ -16,8 +16,8 @@ SilphCo_7F_Text_ExplainLapras::
     .string "be much better off with you.\p"
     .string "I think you will be a good TRAINER\n"
     .string "for SPINDA!\p"
-    .string "It's not a good swimmer.\n"
-    .string "It won't you a lift across water.$"
+    .string "It's not a good swimmer, and it\n"
+    .string "won't give you a lift across water.$"
 
 SilphCo_7F_Text_RocketBossWentToBoardroom::
     .string "TEAM ROCKET's BOSS went to the\n"

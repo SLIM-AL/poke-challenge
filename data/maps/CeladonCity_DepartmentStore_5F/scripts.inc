@@ -121,6 +121,12 @@ CeladonCity_DepartmentStore_5F_Vitamins::
 	.2byte ITEM_LUM_BERRY
 	.2byte ITEM_SALAC_BERRY
 	.2byte ITEM_TOXIC_ORB
+  .2byte ITEM_HP_UP
+  .2byte ITEM_PROTEIN
+  .2byte ITEM_IRON
+  .2byte ITEM_CALCIUM
+  .2byte ITEM_ZINC
+  .2byte ITEM_CARBOS
 	.2byte ITEM_SHELL_BELL
 	.2byte ITEM_DAMP_ROCK
 	.2byte ITEM_HEAT_ROCK
