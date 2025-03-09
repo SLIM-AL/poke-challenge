@@ -1277,7 +1277,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DIG] =
     {
         .effect = EFFECT_SEMI_INVULNERABLE,
-        .power = 60,
+        .power = 80,
         .type = TYPE_GROUND,
         .accuracy = 100,
         .pp = 10,
@@ -3390,7 +3390,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_CRUNCH] =
     {
-        .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
+        .effect = EFFECT_DEFENSE_DOWN_HIT,
         .power = 80,
         .type = TYPE_DARK,
         .accuracy = 100,

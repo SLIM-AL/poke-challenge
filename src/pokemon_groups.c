@@ -45,7 +45,7 @@ u32 GameHash() {
   if (gGameHash == 0) {
     gGameHash = Hash(gSaveBlock1Ptr->rivalName);
   }
-  return gGameHash + 7;
+  return gGameHash - 1;
 }
 
 bool8 IsStarterGroup(const u16 * group) {
