@@ -1,5 +1,8 @@
 #include "play_time.h"
 #include "event_data.h"
+#include "sound.h"
+#include "start_menu.h"
+#include "constants/songs.h"
 
 static u8 sPlayTimeCounterState;
 
@@ -36,6 +39,17 @@ void PlayTimeCounter_Update(void)
     if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) || (sPlayTimeCounterState != RUNNING)) {
         return;
     }
+    if (JOY_NEW(SELECT_BUTTON) || JOY_HELD(SELECT_BUTTON))
+    {
+        if (gSaveBlock2Ptr->playTimeVBlanks % 60 == 0)
+        {
+            PlaySE(SE_NOTE_C_HIGH);
+        }
+        else if (gSaveBlock2Ptr->playTimeVBlanks % 30 == 0)
+        {
+            PlaySE(SE_NOTE_C);
+        }
+    }
     gSaveBlock2Ptr->playTimeVBlanks++;
     if (gSaveBlock2Ptr->playTimeVBlanks > 59)
     {
@@ -43,6 +57,10 @@ void PlayTimeCounter_Update(void)
         gSaveBlock2Ptr->playTimeSeconds++;
         if (gSaveBlock2Ptr->playTimeSeconds > 59)
         {
+            if (JOY_NEW(SELECT_BUTTON) || JOY_HELD(SELECT_BUTTON))
+            {
+                PlaySE(SE_SAVE);
+            }
             gSaveBlock2Ptr->playTimeSeconds = 0;
             gSaveBlock2Ptr->playTimeMinutes++;
             if (gSaveBlock2Ptr->playTimeMinutes > 59)
