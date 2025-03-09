@@ -33,6 +33,14 @@ struct WildPokemonHeader
     const struct WildPokemonInfo *fishingMonsInfo;
 };
 
+enum
+{
+    WILD_AREA_LAND,
+    WILD_AREA_WATER,
+    WILD_AREA_ROCKS,
+    WILD_AREA_FISHING,
+};
+
 extern const struct WildPokemonHeader gWildMonHeaders[];
 
 void DisableWildEncounters(bool8 disabled);
@@ -49,5 +57,8 @@ bool8 SweetScentWildEncounter(void);
 void SeedWildEncounterRng(u16 randVal);
 void ResetEncounterRateModifiers(void);
 bool8 TryStandardWildEncounter(u32 currMetatileAttrs);
+
+// Note that this doesn't work for fishing encounters.
+u16 GetWildMonEncounterRate(const struct WildPokemonInfo* info, u8 area, u16 species);
 
 #endif // GUARD_WILD_ENCOUNTER_H
