@@ -86,13 +86,16 @@ Other changes:
 
 A 7 level band is in place. A portion of the player's team must be within 7 levels, inclusive, of each other;
 e.g. a range of 30-37 is valid but 30-38 isn’t. The number of Pokémon that must be within the band is equal
-to the number of badges the player has plus 1, _with a maximum cutoff of 5_. This means that the 6th Pokémon
-is never taken into account, so one low level Pokémon can be safely carried around for HM use, Pickup, etc.
+to the number of badges the player has plus 1, _with a maximum cutoff of 5_. For example, the player has 3 badges,
+they must have 4 Pokémon within 7 levels (inclusive) of each other. The fact that the 6th Pokémon isn't taken into 
+account means that 1 low level Pokémon can be safely carried around for HM use, Pickup, etc.
 
-For example, the player has 3 badges, they must have 4 Pokémon within 7 levels (inclusive) of each other. If the
-highest leveled Pokémon exceeds the top of the band (also called the _level cap_), it will stop gaining experience
-until it is back within the band. Other party Pokémon holding an EXP share will still gain EXP, but the Pokémon
-outside of the band won’t gain EXP (and the EXP it would have gained won’t be distributed to the other party Pokémon).
+Rare candies do not work on Pokémon that are at the level cap.
+
+If a Pokémon reaches the top of the band (also called the _level cap_), it will not be able to progress to the next
+level, and won't be able to gain EXP once its EXP bar is filled. Other party Pokémon holding an EXP share will still
+gain EXP, but any missed EXP that the Pokémon at the cap would have gained won’t be distributed to the other party
+Pokémon. Note that, as in base FireRed, Pokémon that don't gain EXP also don't gain EVs.
 
 The game will issue warnings when a Pokémon is near the current level cap, or the cap at the next badge. The latter
 warning can be disabled in the OPTION menu, but this is not advised.
@@ -232,7 +235,7 @@ Trainer Pokémon are deterministically replaced with a single Pokémon from thei
 ### Group list
 
 Pokémon that come first in these group are more likely to be the more common substitution
-in situations where a Pokémon maps to 2 species (i.e. for non-fishing Pokémon with a >20% 
+in situations where a Pokémon maps to 2 species (i.e. for non-fishing Pokémon with a >20%
 encounter rate).
 
 | EarlyBoost |
