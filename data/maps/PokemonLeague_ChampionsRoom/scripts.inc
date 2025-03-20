@@ -68,6 +68,7 @@ PokemonLeague_ChampionsRoom_EventScript_EnterRoom::
   giveitem ITEM_RARE_CANDY
   giveitem ITEM_NATURE_MINT
   giveitem ITEM_ABILITY_PATCH
+  special EnableNationalPokedex
 	msgbox PokemonLeague_ChampionsRoom_Text_PostBattle
 	playbgm MUS_SLOW_PALLET, 0
 	addobject LOCALID_PROF_OAK

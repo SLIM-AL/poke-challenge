@@ -45,7 +45,7 @@ u32 GameHash() {
   if (gGameHash == 0) {
     gGameHash = Hash(gSaveBlock1Ptr->rivalName);
   }
-  return gGameHash - 1;
+  return (gGameHash << 1) | (gGameHash >> (32 - 1));
 }
 
 bool8 IsStarterGroup(const u16 * group) {
@@ -182,12 +182,21 @@ u16 GetSpeciesFromGroup(u16 species, u16 randInput) {
   u32 tempCombinedHash1;
   u32 tempCombinedHash2;
   u32 mapHash;
+  bool8 isMiddleEvoStarter = FALSE;
 
   if (species >= sizeof(gMonGroups) || gMonGroups[species] == NULL) {
     return species;
   }
 
-  group = gMonGroups[species];
+  if (species == SPECIES_IVYSAUR || species == SPECIES_CHARMELEON || species == SPECIES_WARTORTLE || 
+      species == SPECIES_BAYLEEF || species == SPECIES_QUILAVA || species == SPECIES_CROCONAW || 
+      species == SPECIES_GROVYLE || species == SPECIES_COMBUSKEN || species == SPECIES_MARSHTOMP) {
+    group = gMonGroups[species-1];
+    isMiddleEvoStarter = TRUE;
+  } else {
+    group = gMonGroups[species];
+  }
+
 
   // If this is a starter, just use the game hash.
   if (IsStarterGroup(group)) {
@@ -196,7 +205,7 @@ u16 GetSpeciesFromGroup(u16 species, u16 randInput) {
     // Don't take route into account, so that rival
     // has the same starter throughout the game.
     combinedHash = HashCombine(GameHash(), Hash(gSpeciesNames[(species + 2) / 3]));
-    return IndexInto(group, combinedHash);
+    return IndexInto(group, combinedHash) + isMiddleEvoStarter;
   }
 
   if (randInput != RAND_INPUT_PICK_1 && randInput != RAND_INPUT_PICK_2) {

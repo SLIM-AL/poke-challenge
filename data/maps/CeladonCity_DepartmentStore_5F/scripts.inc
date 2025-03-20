@@ -26,7 +26,6 @@ CeladonCity_DepartmentStore_5F_EventScript_ClerkXItems::
 
 	.align 2
 CeladonCity_DepartmentStore_5F_XItems::
-	.2byte ITEM_ZOOM_LENS
 	.2byte ITEM_AGUAV_BERRY
 	.2byte ITEM_BERRY_JUICE
 	.2byte ITEM_BLACK_BELT
@@ -61,6 +60,7 @@ CeladonCity_DepartmentStore_5F_XItems::
 	.2byte ITEM_WAVE_INCENSE
 	.2byte ITEM_WIKI_BERRY
 	.2byte ITEM_WISE_GLASSES
+	.2byte ITEM_ZOOM_LENS
 	.2byte ITEM_APICOT_BERRY
 	.2byte ITEM_ASPEAR_BERRY
 	.2byte ITEM_CHERI_BERRY
