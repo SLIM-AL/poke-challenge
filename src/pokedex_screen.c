@@ -1170,9 +1170,13 @@ static void MoveCursorFunc_DexModeSelect(s32 itemIndex, bool8 onInit, struct Lis
     }
     else
     {
-        if (itemIndex != DEX_MODE(NUMERICAL_NATIONAL) && itemIndex != DEX_MODE(ATOZ))
+        if (itemIndex == DEX_MODE(NUMERICAL_NATIONAL) || itemIndex == DEX_MODE(ATOZ) || itemIndex == DEX_MODE(NUMERICAL_KANTO) || itemIndex == DEX_MODE(TYPE))
         {
-            itemIndex = DEX_CATEGORY_RARE;
+            itemIndex = DEX_MODE(ATOZ);
+        }
+        else
+        {
+            itemIndex = gDexImages[itemIndex];
         }
         CopyToWindowPixelBuffer(sPokedexScreenData->selectionIconWindowId, sTopMenuSelectionIconGfxPtrs[itemIndex].tiles, 0x000, 0x000);
         LoadPalette(sTopMenuSelectionIconGfxPtrs[itemIndex].pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);

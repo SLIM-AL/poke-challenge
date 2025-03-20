@@ -22,11 +22,11 @@ extern const u16 gGroup_Spooky2[16];
 extern const u16 gGroup_Urban1[17];
 extern const u16 gGroup_Urban2[12];
 extern const u16 gGroup_WaterIce1[34];
-extern const u16 gGroup_WaterIce2[27];
+extern const u16 gGroup_WaterIce2[28];
 extern const u16 gGroup_Overworld1[36];
 extern const u16 gGroup_Overworld2[48];
 extern const u16 gGroup_CeruleanCave[6];
-extern const u16 gGroup_NotCatchable[30];
+extern const u16 gGroup_NotCatchable[29];
 extern const u16 gGroup_GrassStarter3[4];
 extern const u16 gGroup_FireStarter3[4];
 extern const u16 gGroup_WaterStarter3[4];
@@ -34,9 +34,9 @@ extern const u16 gGroup_GrassStarter1[4];
 extern const u16 gGroup_FireStarter1[4];
 extern const u16 gGroup_WaterStarter1[4];
 
-extern const u16* const gMonGroups[651];
-extern const u16* gGroupPtrs[21];
-extern const u8* const gGroupNamePtrs[21];
+extern const u16* const gMonGroups[412];
+extern const u16* gGroupPtrs[24];
+extern const u8* const gGroupNamePtrs[24];
 
 extern const u8 gEarlyBoostName[];
 extern const u8 gNormalFlying1Name[];
@@ -59,7 +59,11 @@ extern const u8 gNotCatchableName[];
 extern const u8 gGrassStarter3Name[];
 extern const u8 gFireStarter3Name[];
 extern const u8 gWaterStarter3Name[];
+extern const u8 gGrassStarter1Name[];
+extern const u8 gFireStarter1Name[];
+extern const u8 gWaterStarter1Name[];
 
+extern const u16 gDexImages[24];
 
 #define DEX_GROUP_ITEMS() \
 {gEarlyBoostName, 0},\

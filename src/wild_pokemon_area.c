@@ -341,19 +341,6 @@ static bool32 IsSpeciesPossiblyInEncounterTable(const struct WildPokemonHeader *
   u16 i;
   u16 j;
 
-  if (gMonGroups[species] == gGroup_NotCatchable ||
-      gMonGroups[species]  == gGroup_GrassStarter3 ||
-      gMonGroups[species]  == gGroup_WaterStarter3 ||
-      gMonGroups[species]  == gGroup_FireStarter3) {
-    return FALSE;
-  }
-  if (gMonGroups[species]  == gGroup_EarlyBoost ||
-      gMonGroups[species]  == gGroup_GrassStarter1 ||
-      gMonGroups[species]  == gGroup_WaterStarter1 ||
-      gMonGroups[species]  == gGroup_FireStarter1) {
-    return area == WILD_AREA_LAND;
-  }
-
   for (i = 0; i < count; ++i) {
     for (j = 1; j <= gMonGroups[species][0]; ++j) {
       if (info->wildPokemon[i].species == gMonGroups[species][j]) {

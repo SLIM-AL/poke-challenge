@@ -81,4 +81,5 @@ void PlayTimeCounter_SetToMax(void)
     gSaveBlock2Ptr->playTimeMinutes = 59;
     gSaveBlock2Ptr->playTimeSeconds = 59;
     gSaveBlock2Ptr->playTimeVBlanks = 59;
+    PlaySE(SE_FAILURE);
 }
