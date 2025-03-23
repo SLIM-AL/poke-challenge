@@ -1006,6 +1006,12 @@ Text_FoundTMHMContainsMove::
 Text_Gyaoo::
 	.string "Gyaoo!$"
 
+@ Also for legendary bird trio
+Text_PokedexAccuracyImproved::
+    .string "Your POKéDEX has been upgraded!\p"
+    .string "It has been populated with another\n"
+    .string "third of POKéMON locations.$"
+
 Text_MoveCanOnlyBeLearnedOnce::
 	.string "This move can be learned only\n"
 	.string "once. Is that okay?$"
