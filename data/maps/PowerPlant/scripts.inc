@@ -59,6 +59,9 @@ PowerPlant_EventScript_Zapdos::
 	end
 
 PowerPlant_EventScript_DefeatedZapdos::
+	playfanfare MUS_EVOLVED
+	message Text_PokedexAccuracyImproved
+	waitse
 	giveitem ITEM_RARE_CANDY
 	setflag FLAG_FOUGHT_ZAPDOS
 	goto EventScript_RemoveStaticMon
