@@ -24,7 +24,6 @@
 #include "constants/moves.h"
 #include "constants/songs.h"
 #include "constants/sound.h"
-#include "play_time.h"
 
 static void PlayerHandleGetMonData(void);
 static void PlayerHandleSetMonData(void);
@@ -233,14 +232,6 @@ static void HandleInputChooseAction(void)
     if (JOY_NEW(A_BUTTON) || JOY_HELD(L_BUTTON))
     {
         PlaySE(SE_SELECT);
-
-        // There are reports that the timer doesn't always run in battles.
-        // Let's see if this fixes it.
-        if (FlagSet(FLAG_CHALLENGE_NOT_OVER))
-        {
-            PlayTimeCounter_Start();
-        }
-
         switch (gActionSelectionCursor[gActiveBattler])
         {
         case 0:

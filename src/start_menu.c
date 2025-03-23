@@ -678,20 +678,8 @@ static void SetSaveDialogDelayTo60Frames(void)
 
 static bool8 SaveDialog_Wait60FramesOrAButtonHeld(void)
 {
-    sSaveDialogDelay--;
-    if (JOY_HELD(A_BUTTON))
-    {
-        PlaySE(SE_SELECT);
-        return TRUE;
-    }
-    else if (sSaveDialogDelay == 0)
-    {
-        return TRUE;
-    }
-    else
-    {
-        return FALSE;
-    }
+    PlaySE(SE_SELECT);
+    return TRUE;
 }
 
 static bool8 SaveDialog_Wait60FramesThenCheckAButtonHeld(void)
@@ -815,9 +803,14 @@ static u8 SaveDialogCB_DoSave(void)
 static u8 SaveDialogCB_PrintSaveResult(void)
 {
     if (gSaveAttemptStatus == SAVE_STATUS_OK)
+    {
         PrintSaveTextWithFollowupFunc(gText_PlayerSavedTheGame, SaveDialogCB_WaitPrintSuccessAndPlaySE);
+        PlayTimeCounter_Start();
+    }
     else
+    {
         PrintSaveTextWithFollowupFunc(gText_SaveError_PleaseExchangeBackupMemory, SaveDialogCB_WaitPrintErrorAndPlaySE);
+    }
     SetSaveDialogDelayTo60Frames();
     return SAVECB_RETURN_CONTINUE;
 }

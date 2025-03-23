@@ -24,7 +24,7 @@ Other changes:
  - Faster movement, animations, and text. Hold B to use normal walking speed.
  - Start the game with balls, healing items, the Old Rod, 6 Exp Shares, and more.
  - L button maps to A button. In battles, L button auto-fires A and holding R automatically runs away.
- - Holding SELECT plays audio notifications when the clock is running. This can be used to double check in which menus the clock is stopped. It plays alternating pitches every half second, and the save sound every time the clock advances one minute.
+ - Holding SELECT plays audio notifications when the clock is running. It plays a click every half second, and the itemfinder sound every time the clock advances one minute. This can be used to double check in which menus the clock is stopped.
  - Gain experience for catching Pokémon.
  - Oak's aides give large sums of money for completing the Pokédex. You can find them in the Department Store and their original locations. The rewards are as follows:
    - 500 for 1 unique species.

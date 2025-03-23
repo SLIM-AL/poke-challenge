@@ -39,18 +39,18 @@ void PlayTimeCounter_Update(void)
     if (!FlagGet(FLAG_CHALLENGE_NOT_OVER) || (sPlayTimeCounterState != RUNNING)) {
         return;
     }
+    gSaveBlock2Ptr->playTimeVBlanks++;
     if (JOY_NEW(SELECT_BUTTON) || JOY_HELD(SELECT_BUTTON))
     {
         if (gSaveBlock2Ptr->playTimeVBlanks % 60 == 0)
         {
-            PlaySE(SE_NOTE_C_HIGH);
+            PlaySE(SE_CLICK);
         }
         else if (gSaveBlock2Ptr->playTimeVBlanks % 30 == 0)
         {
-            PlaySE(SE_NOTE_C);
+            PlaySE(SE_CLICK);
         }
     }
-    gSaveBlock2Ptr->playTimeVBlanks++;
     if (gSaveBlock2Ptr->playTimeVBlanks > 59)
     {
         gSaveBlock2Ptr->playTimeVBlanks = 0;
@@ -59,7 +59,7 @@ void PlayTimeCounter_Update(void)
         {
             if (JOY_NEW(SELECT_BUTTON) || JOY_HELD(SELECT_BUTTON))
             {
-                PlaySE(SE_SAVE);
+                PlaySE(SE_ITEMFINDER);
             }
             gSaveBlock2Ptr->playTimeSeconds = 0;
             gSaveBlock2Ptr->playTimeMinutes++;
