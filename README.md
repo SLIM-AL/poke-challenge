@@ -77,7 +77,7 @@ Other changes:
  - Party menu shortcut for giving/taking Exp Shares.
  - Safari Balls are 53% more effective, which makes them 15% more effective than Ultra Balls.
  - Pewter, Cerulean, and Vermillion Marts sell Revives.
- - Celadon Mart sells Ultra Balls.
+ - All Marts sell Poké, Great, and Ultra balls.
  - All Pokémon that aren't normally catchable in the Safari Zone have a Safari Zone [flee rate](https://bulbapedia.bulbagarden.net/wiki/Kanto_Safari_Zone) of 75 (base 25% chance of fleeing).
  - After the Elite Four is beaten, the Sevii Islands Lorelei quest will be unlocked. The Elite Four can't be refought again until the quest is completed (and they will have higher level Pokémon).
  - Some early events are skipped; e.g. the Old Man.
