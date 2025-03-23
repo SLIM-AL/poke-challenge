@@ -165,8 +165,8 @@ gPikachuIntro_Text_Page1::
     .string "randomized based on the name you\n"
     .string "give your rival in the next scene.\n"
     .string "\n"
-    .string "Make sure to input the same rival\n"
-    .string "name as your friends!$"
+    .string "Use the same rival name as your\n"
+    .string "friends. You only have 5 hours!$"
 
 gOakSpeech_Text_WelcomeToTheWorld::
     .string "Hello, there!\n"
