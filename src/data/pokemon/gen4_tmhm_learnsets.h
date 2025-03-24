@@ -339,7 +339,15 @@ static const u32 sGen4TMHMLearnsets[][2] =
                                         | G4TMHM(TM075_SWORDS_DANCE)
                                         | G4TMHM(TM081_X_SCISSOR)),
 
-  [SPECIES_NIDORAN_F] = G4TMHM_LEARNSET(0),
+  [SPECIES_NIDORAN_F] = G4TMHM_LEARNSET(0
+                                        | G4TMHM(TM078_CAPTIVATE)
+                                        | G4TMHM(TM058_ENDURE)
+                                        | G4TMHM(TM083_NATURAL_GIFT)
+                                        | G4TMHM(TM084_POISON_JAB)
+                                        | G4TMHM(TM065_SHADOW_CLAW)
+                                        | G4TMHM(TM082_SLEEP_TALK)
+                                        | G4TMHM(TM090_SUBSTITUTE)
+                                        | G4TMHM(TM087_SWAGGER)),
 
   [SPECIES_NIDORINA] = G4TMHM_LEARNSET(0
                                         | G4TMHM(TM078_CAPTIVATE)
@@ -369,7 +377,15 @@ static const u32 sGen4TMHMLearnsets[][2] =
                                         | G4TMHM(TM090_SUBSTITUTE)
                                         | G4TMHM(TM087_SWAGGER)),
 
-  [SPECIES_NIDORAN_M] = G4TMHM_LEARNSET(0),
+  [SPECIES_NIDORAN_M] = G4TMHM_LEARNSET(0
+                                        | G4TMHM(TM078_CAPTIVATE)
+                                        | G4TMHM(TM058_ENDURE)
+                                        | G4TMHM(TM083_NATURAL_GIFT)
+                                        | G4TMHM(TM084_POISON_JAB)
+                                        | G4TMHM(TM065_SHADOW_CLAW)
+                                        | G4TMHM(TM082_SLEEP_TALK)
+                                        | G4TMHM(TM090_SUBSTITUTE)
+                                        | G4TMHM(TM087_SWAGGER)),
 
   [SPECIES_NIDORINO] = G4TMHM_LEARNSET(0
                                         | G4TMHM(TM078_CAPTIVATE)
@@ -1628,7 +1644,26 @@ static const u32 sGen4TMHMLearnsets[][2] =
                                         | G4TMHM(TM073_THUNDER_WAVE)
                                         | G4TMHM(TM092_TRICK_ROOM)),
 
-  [SPECIES_MR_MIME] = G4TMHM_LEARNSET(0),
+  [SPECIES_MR_MIME] = G4TMHM_LEARNSET(0
+                                        | G4TMHM(TM078_CAPTIVATE)
+                                        | G4TMHM(TM057_CHARGE_BEAM)
+                                        | G4TMHM(TM060_DRAIN_PUNCH)
+                                        | G4TMHM(TM085_DREAM_EATER)
+                                        | G4TMHM(TM058_ENDURE)
+                                        | G4TMHM(TM053_ENERGY_BALL)
+                                        | G4TMHM(TM056_FLING)
+                                        | G4TMHM(TM052_FOCUS_BLAST)
+                                        | G4TMHM(TM068_GIGA_IMPACT)
+                                        | G4TMHM(TM086_GRASS_KNOT)
+                                        | G4TMHM(TM083_NATURAL_GIFT)
+                                        | G4TMHM(TM066_PAYBACK)
+                                        | G4TMHM(TM077_PSYCH_UP)
+                                        | G4TMHM(TM067_RECYCLE)
+                                        | G4TMHM(TM082_SLEEP_TALK)
+                                        | G4TMHM(TM090_SUBSTITUTE)
+                                        | G4TMHM(TM087_SWAGGER)
+                                        | G4TMHM(TM073_THUNDER_WAVE)
+                                        | G4TMHM(TM092_TRICK_ROOM)),
 
   [SPECIES_SCYTHER] = G4TMHM_LEARNSET(0
                                         | G4TMHM(TM078_CAPTIVATE)
@@ -1965,7 +2000,22 @@ static const u32 sGen4TMHMLearnsets[][2] =
                                         | G4TMHM(TM087_SWAGGER)
                                         | G4TMHM(TM073_THUNDER_WAVE)),
 
-  [SPECIES_MIME_JR] = G4TMHM_LEARNSET(0),
+  [SPECIES_MIME_JR] = G4TMHM_LEARNSET(0
+                                        | G4TMHM(TM078_CAPTIVATE)
+                                        | G4TMHM(TM057_CHARGE_BEAM)
+                                        | G4TMHM(TM060_DRAIN_PUNCH)
+                                        | G4TMHM(TM085_DREAM_EATER)
+                                        | G4TMHM(TM058_ENDURE)
+                                        | G4TMHM(TM056_FLING)
+                                        | G4TMHM(TM086_GRASS_KNOT)
+                                        | G4TMHM(TM083_NATURAL_GIFT)
+                                        | G4TMHM(TM077_PSYCH_UP)
+                                        | G4TMHM(TM067_RECYCLE)
+                                        | G4TMHM(TM082_SLEEP_TALK)
+                                        | G4TMHM(TM090_SUBSTITUTE)
+                                        | G4TMHM(TM087_SWAGGER)
+                                        | G4TMHM(TM073_THUNDER_WAVE)
+                                        | G4TMHM(TM092_TRICK_ROOM)),
 
   [SPECIES_BUDEW] = G4TMHM_LEARNSET(0
                                         | G4TMHM(TM078_CAPTIVATE)
@@ -5203,7 +5253,21 @@ static const u32 sGen4TMHMLearnsets[][2] =
                                         | G4TMHM(TM090_SUBSTITUTE)
                                         | G4TMHM(TM087_SWAGGER)),
 
-  [SPECIES_PORYGON_Z] = G4TMHM_LEARNSET(0),
+  [SPECIES_PORYGON_Z] = G4TMHM_LEARNSET(0
+                                        | G4TMHM(TM057_CHARGE_BEAM)
+                                        | G4TMHM(TM079_DARK_PULSE)
+                                        | G4TMHM(TM085_DREAM_EATER)
+                                        | G4TMHM(TM063_EMBARGO)
+                                        | G4TMHM(TM058_ENDURE)
+                                        | G4TMHM(TM068_GIGA_IMPACT)
+                                        | G4TMHM(TM083_NATURAL_GIFT)
+                                        | G4TMHM(TM077_PSYCH_UP)
+                                        | G4TMHM(TM067_RECYCLE)
+                                        | G4TMHM(TM082_SLEEP_TALK)
+                                        | G4TMHM(TM090_SUBSTITUTE)
+                                        | G4TMHM(TM087_SWAGGER)
+                                        | G4TMHM(TM073_THUNDER_WAVE)
+                                        | G4TMHM(TM092_TRICK_ROOM)),
 
   [SPECIES_GALLADE] = G4TMHM_LEARNSET(0
                                         | G4TMHM(TM078_CAPTIVATE)

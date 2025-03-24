@@ -597,7 +597,33 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM046_THIEF)
                                         | TMHM(TM006_TOXIC)),
 
-    [SPECIES_NIDORAN_F]   = TMHM_LEARNSET(0),
+    [SPECIES_NIDORAN_F]   = TMHM_LEARNSET(0
+                                        | TMHM(TM040_AERIAL_ACE)
+                                        | TMHM(TM045_ATTRACT)
+                                        | TMHM(TM014_BLIZZARD)
+                                        | TMHM(HM01_CUT)
+                                        | TMHM(TM028_DIG)
+                                        | TMHM(TM032_DOUBLE_TEAM)
+                                        | TMHM(TM042_FACADE)
+                                        | TMHM(TM021_FRUSTRATION)
+                                        | TMHM(TM010_HIDDEN_POWER)
+                                        | TMHM(TM013_ICE_BEAM)
+                                        | TMHM(TM023_IRON_TAIL)
+                                        | TMHM(TM017_PROTECT)
+                                        | TMHM(TM018_RAIN_DANCE)
+                                        | TMHM(TM044_REST)
+                                        | TMHM(TM027_RETURN)
+                                        | TMHM(HM06_ROCK_SMASH)
+                                        | TMHM(TM043_SECRET_POWER)
+                                        | TMHM(TM034_SHOCK_WAVE)
+                                        | TMHM(TM036_SLUDGE_BOMB)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(TM011_SUNNY_DAY)
+                                        | TMHM(TM046_THIEF)
+                                        | TMHM(TM025_THUNDER)
+                                        | TMHM(TM024_THUNDERBOLT)
+                                        | TMHM(TM006_TOXIC)
+                                        | TMHM(TM003_WATER_PULSE)),
 
     [SPECIES_NIDORINA]    = TMHM_LEARNSET(0
                                         | TMHM(TM040_AERIAL_ACE)
@@ -668,7 +694,32 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM006_TOXIC)
                                         | TMHM(TM003_WATER_PULSE)),
 
-    [SPECIES_NIDORAN_M]   = TMHM_LEARNSET(0),
+    [SPECIES_NIDORAN_M]   = TMHM_LEARNSET(0
+                                        | TMHM(TM045_ATTRACT)
+                                        | TMHM(TM014_BLIZZARD)
+                                        | TMHM(HM01_CUT)
+                                        | TMHM(TM028_DIG)
+                                        | TMHM(TM032_DOUBLE_TEAM)
+                                        | TMHM(TM042_FACADE)
+                                        | TMHM(TM021_FRUSTRATION)
+                                        | TMHM(TM010_HIDDEN_POWER)
+                                        | TMHM(TM013_ICE_BEAM)
+                                        | TMHM(TM023_IRON_TAIL)
+                                        | TMHM(TM017_PROTECT)
+                                        | TMHM(TM018_RAIN_DANCE)
+                                        | TMHM(TM044_REST)
+                                        | TMHM(TM027_RETURN)
+                                        | TMHM(HM06_ROCK_SMASH)
+                                        | TMHM(TM043_SECRET_POWER)
+                                        | TMHM(TM034_SHOCK_WAVE)
+                                        | TMHM(TM036_SLUDGE_BOMB)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(TM011_SUNNY_DAY)
+                                        | TMHM(TM046_THIEF)
+                                        | TMHM(TM025_THUNDER)
+                                        | TMHM(TM024_THUNDERBOLT)
+                                        | TMHM(TM006_TOXIC)
+                                        | TMHM(TM003_WATER_PULSE)),
 
     [SPECIES_NIDORINO]    = TMHM_LEARNSET(0
                                         | TMHM(TM045_ATTRACT)
@@ -2955,7 +3006,39 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(TM003_WATER_PULSE)),
 
-    [SPECIES_MR_MIME]     = TMHM_LEARNSET(0),
+    [SPECIES_MR_MIME]     = TMHM_LEARNSET(0
+                                        | TMHM(TM040_AERIAL_ACE)
+                                        | TMHM(TM045_ATTRACT)
+                                        | TMHM(TM031_BRICK_BREAK)
+                                        | TMHM(TM004_CALM_MIND)
+                                        | TMHM(TM032_DOUBLE_TEAM)
+                                        | TMHM(TM042_FACADE)
+                                        | TMHM(HM05_FLASH)
+                                        | TMHM(TM001_FOCUS_PUNCH)
+                                        | TMHM(TM021_FRUSTRATION)
+                                        | TMHM(TM010_HIDDEN_POWER)
+                                        | TMHM(TM015_HYPER_BEAM)
+                                        | TMHM(TM016_LIGHT_SCREEN)
+                                        | TMHM(TM017_PROTECT)
+                                        | TMHM(TM029_PSYCHIC)
+                                        | TMHM(TM018_RAIN_DANCE)
+                                        | TMHM(TM033_REFLECT)
+                                        | TMHM(TM044_REST)
+                                        | TMHM(TM027_RETURN)
+                                        | TMHM(TM020_SAFEGUARD)
+                                        | TMHM(TM043_SECRET_POWER)
+                                        | TMHM(TM030_SHADOW_BALL)
+                                        | TMHM(TM034_SHOCK_WAVE)
+                                        | TMHM(TM048_SKILL_SWAP)
+                                        | TMHM(TM049_SNATCH)
+                                        | TMHM(TM022_SOLAR_BEAM)
+                                        | TMHM(TM011_SUNNY_DAY)
+                                        | TMHM(TM012_TAUNT)
+                                        | TMHM(TM046_THIEF)
+                                        | TMHM(TM025_THUNDER)
+                                        | TMHM(TM024_THUNDERBOLT)
+                                        | TMHM(TM041_TORMENT)
+                                        | TMHM(TM006_TOXIC)),
 
     [SPECIES_SCYTHER]     = TMHM_LEARNSET(0
                                         | TMHM(TM040_AERIAL_ACE)
@@ -3640,7 +3723,37 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(TM003_WATER_PULSE)),
 
-    [SPECIES_MIME_JR]      = TMHM_LEARNSET(0),
+    [SPECIES_MIME_JR]      = TMHM_LEARNSET(0
+                                        | TMHM(TM045_ATTRACT)
+                                        | TMHM(TM031_BRICK_BREAK)
+                                        | TMHM(TM004_CALM_MIND)
+                                        | TMHM(TM032_DOUBLE_TEAM)
+                                        | TMHM(TM042_FACADE)
+                                        | TMHM(HM05_FLASH)
+                                        | TMHM(TM001_FOCUS_PUNCH)
+                                        | TMHM(TM021_FRUSTRATION)
+                                        | TMHM(TM010_HIDDEN_POWER)
+                                        | TMHM(TM016_LIGHT_SCREEN)
+                                        | TMHM(TM017_PROTECT)
+                                        | TMHM(TM029_PSYCHIC)
+                                        | TMHM(TM018_RAIN_DANCE)
+                                        | TMHM(TM033_REFLECT)
+                                        | TMHM(TM044_REST)
+                                        | TMHM(TM027_RETURN)
+                                        | TMHM(TM020_SAFEGUARD)
+                                        | TMHM(TM043_SECRET_POWER)
+                                        | TMHM(TM030_SHADOW_BALL)
+                                        | TMHM(TM034_SHOCK_WAVE)
+                                        | TMHM(TM048_SKILL_SWAP)
+                                        | TMHM(TM049_SNATCH)
+                                        | TMHM(TM022_SOLAR_BEAM)
+                                        | TMHM(TM011_SUNNY_DAY)
+                                        | TMHM(TM012_TAUNT)
+                                        | TMHM(TM046_THIEF)
+                                        | TMHM(TM025_THUNDER)
+                                        | TMHM(TM024_THUNDERBOLT)
+                                        | TMHM(TM041_TORMENT)
+                                        | TMHM(TM006_TOXIC)),
 
     [SPECIES_BUDEW]         = TMHM_LEARNSET(0
                                         | TMHM(TM045_ATTRACT)
@@ -9524,7 +9637,31 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM024_THUNDERBOLT)
                                         | TMHM(TM006_TOXIC)),
 
-    [SPECIES_PORYGON_Z]      = TMHM_LEARNSET(0),
+    [SPECIES_PORYGON_Z]      = TMHM_LEARNSET(0
+                                        | TMHM(TM040_AERIAL_ACE)
+                                        | TMHM(TM014_BLIZZARD)
+                                        | TMHM(TM032_DOUBLE_TEAM)
+                                        | TMHM(TM042_FACADE)
+                                        | TMHM(HM05_FLASH)
+                                        | TMHM(TM021_FRUSTRATION)
+                                        | TMHM(TM010_HIDDEN_POWER)
+                                        | TMHM(TM015_HYPER_BEAM)
+                                        | TMHM(TM013_ICE_BEAM)
+                                        | TMHM(TM023_IRON_TAIL)
+                                        | TMHM(TM017_PROTECT)
+                                        | TMHM(TM029_PSYCHIC)
+                                        | TMHM(TM018_RAIN_DANCE)
+                                        | TMHM(TM044_REST)
+                                        | TMHM(TM027_RETURN)
+                                        | TMHM(TM043_SECRET_POWER)
+                                        | TMHM(TM030_SHADOW_BALL)
+                                        | TMHM(TM034_SHOCK_WAVE)
+                                        | TMHM(TM022_SOLAR_BEAM)
+                                        | TMHM(TM011_SUNNY_DAY)
+                                        | TMHM(TM046_THIEF)
+                                        | TMHM(TM025_THUNDER)
+                                        | TMHM(TM024_THUNDERBOLT)
+                                        | TMHM(TM006_TOXIC)),
 
     [SPECIES_GALLADE]     = TMHM_LEARNSET(0
                                         | TMHM(TM040_AERIAL_ACE)
