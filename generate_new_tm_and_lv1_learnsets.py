@@ -990,9 +990,6 @@ with open('original_level_up_learnsets.h', 'r') as h_file:
 with open('src/data/pokemon/level_up_learnsets.h', 'w') as h_file:
   h_file.write(s)
 
-for mon in missing_old_tms:
-  print(mon)
-
 s = ''
 with open('original_tmhm_learnsets.h', 'r') as h_file:
   found_first_mon = False
@@ -1018,9 +1015,6 @@ with open('src/data/pokemon/tmhm_learnsets.h', 'w') as h_file:
   s += '\n};'
   h_file.write(s)
 
-
-print('-------')
-
 s = ''
 with open('original_gen4_tmhm_learnsets.h', 'r') as h_file:
   found_first_mon = False
@@ -1035,7 +1029,6 @@ with open('original_gen4_tmhm_learnsets.h', 'r') as h_file:
       s += line.split('TMHM_LEARNSET(')[0] + 'TMHM_LEARNSET(0\n'
       found_first_mon = True
       mon = line.strip().split('SPECIES_')[1].split(']')[0].lower().replace('_', '')
-      print(mon)
       for move in sorted(missing_old_tms.get(mon, [])):
         tm = moves_l2tmu[move]
         if tm > 'TM051':
