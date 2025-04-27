@@ -33,7 +33,7 @@ Other changes:
    - 20k for 60 unique species.
    - 40k for 80 unique species.
    - 80k for 100 unique species.
- - Starter Pokémon are randomized based on the game seed. There is still one grass, water, and fire starter, and they will be chosen from the gen 1-3 starters.
+ - Starter Pokémon are randomized based on the game seed. There is still one grass, water, and fire starter, chosen from the gen 1-3 starters. IVs and Natures are the same for each starter, and are based on the game seed.
  - Move tutors give the player a random TM instead. Purchasable, winnable, and gift TMs are randomized.
  - Overworld Pokémon (e.g. Snorlax, Articuno) can't be caught.
  - Gym leaders give the player a Rare Candy in addition to a TM upon earning a badge.
@@ -46,6 +46,7 @@ Other changes:
  - Elite Four members give the player a Rare Candy and Nature Mint upon defeat (first time only).
  - The Champion gives the player a Rare Candy, Nature Mint, and Ability Patch upon defeat (every time).
  - The Karate Master gives the player a MACHO BRACE.
+ - Choice Specs and Choice Scarf are implemented properly. Other Gen IV items are not.
  - Physical/special split.
  - Dragonair, Pupitar, and Shelgon evolve at level 50.
  - Gift Pokémon are replaced with Spinda.
