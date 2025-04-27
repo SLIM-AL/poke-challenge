@@ -3425,8 +3425,8 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
      && FlagGet(FLAG_BADGE03_GET)
      && GetBattlerSide(battler2) == B_SIDE_PLAYER)
         speedBattler2 = (speedBattler2 * 110) / 100;
-    if (gBattleMons[battler1].item == ITEM_CHOICE_SCARF)
-        speedBattler1 = (speedBattler1 * 150) / 100;
+    if (gBattleMons[battler2].item == ITEM_CHOICE_SCARF)
+        speedBattler2 = (speedBattler2 * 150) / 100;
     if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
         speedBattler2 /= 2;
     if (gBattleMons[battler2].status1 & STATUS1_PARALYSIS)
