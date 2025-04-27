@@ -303,6 +303,11 @@ static bool8 CanFish(void)
     GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
     behavior = MapGridGetMetatileBehaviorAt(x, y);
 
+    // Make Old Rod not work until the player picks a starter.
+    if (gPlayerPartyCount == 0) {
+        return FALSE;
+    }
+
     if (MetatileBehavior_IsWaterfall(behavior))
         return FALSE;
     if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_UNDERWATER))

@@ -36,6 +36,7 @@
 #include "constants/hold_effects.h"
 #include "constants/battle_move_effects.h"
 #include "constants/union_room.h"
+#include "pokemon_groups.h"
 
 #define SPECIES_TO_HOENN(name)      [SPECIES_##name - 1] = HOENN_DEX_##name
 #define SPECIES_TO_NATIONAL(name)   [SPECIES_##name - 1] = NATIONAL_DEX_##name
@@ -1779,6 +1780,11 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     else
         personality = Random32();
 
+    // Make starters have the same nature.
+    if (gPlayerPartyCount == 0) {
+        personality = GameHash();
+    }
+
     SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
 
     //Determine original trainer ID
@@ -1837,6 +1843,11 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         u32 iv;
         value = Random();
 
+        // Make starters have the same IVs.
+        if (gPlayerPartyCount == 0) {
+            value = GameHash();
+        }
+
         iv = value & MAX_IV_MASK;
         SetBoxMonData(boxMon, MON_DATA_HP_IV, &iv);
         iv = (value & (MAX_IV_MASK << 5)) >> 5;
@@ -1845,6 +1856,11 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         SetBoxMonData(boxMon, MON_DATA_DEF_IV, &iv);
 
         value = Random();
+
+        // Make starters have the same IVs.
+        if (gPlayerPartyCount == 0) {
+            value = ~GameHash();
+        }
 
         iv = value & MAX_IV_MASK;
         SetBoxMonData(boxMon, MON_DATA_SPEED_IV, &iv);
@@ -2459,6 +2475,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     // Apply boosts from hold items
     if (attackerHoldEffect == HOLD_EFFECT_CHOICE_BAND)
         attack = (150 * attack) / 100;
+    if (attackerHoldEffect == HOLD_EFFECT_CHOICE_SPECS)
+        spAttack = (150 * spAttack) / 100;
     if (attackerHoldEffect == HOLD_EFFECT_SOUL_DEW && !(gBattleTypeFlags & (BATTLE_TYPE_BATTLE_TOWER)) && (attacker->species == SPECIES_RHYPERIOR || attacker->species == SPECIES_MAMOSWINE))
         spAttack = (150 * spAttack) / 100;
     if (defenderHoldEffect == HOLD_EFFECT_SOUL_DEW && !(gBattleTypeFlags & (BATTLE_TYPE_BATTLE_TOWER)) && (defender->species == SPECIES_RHYPERIOR || defender->species == SPECIES_MAMOSWINE))
