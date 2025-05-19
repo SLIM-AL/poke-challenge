@@ -123,7 +123,7 @@ static void Task_SSAnneRun(u8 taskId)
     }
     else
     {
-        x = data[2] / 5;
+        x = data[2];
         gSprites[boatObject->spriteId].x2 = -x;
     }
 }
