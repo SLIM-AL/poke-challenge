@@ -1833,9 +1833,7 @@ void TrySpawnObjectEvents(s16 cameraX, s16 cameraY)
             // It's used to make sure key items are still attainable.
             if (gMapHeader.allowRunning && !gMapHeader.cave &&
                 (GetObjectEventGraphicsInfo(template->graphicsId) == &gObjectEventGraphicsInfo_ItemBall)) {
-              const u32 hashPart1 = (u32)SeededRandom(3797 * (template->flagId % 17 + 1)) << 16;
-              const u32 hashPart2 = SeededRandom(7193 * (template->localId % 9 + 1));
-              const u32 hash = HashCombine(GameHash(), (hashPart1 << 16) | (hashPart2 & 0xffff));
+              const u32 hash = HashCombine(GameHash(), HashInt((template->localId * 429496731) + (template->flagId * 3797)));
 
               u16 randX = hash & 0xffff;
               u16 randY = (hash >> 16) & 0xffff;

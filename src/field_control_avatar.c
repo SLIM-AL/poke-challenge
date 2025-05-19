@@ -30,6 +30,7 @@
 #include "constants/event_objects.h"
 #include "constants/maps.h"
 #include "constants/metatile_behaviors.h"
+#include "field_message_box.h"
 
 #define SIGNPOST_POKECENTER 0
 #define SIGNPOST_POKEMART 1
@@ -73,6 +74,15 @@ static const u8 *GetCoordEventScriptAtPosition(struct MapHeader * mapHeader, u16
 
 struct FieldInput gFieldInputRecord;
 
+bool8 gShowPickupMessage = FALSE;
+bool8 gHidePickupMessage = FALSE;
+
+void SetPickup() {
+    gShowPickupMessage = TRUE;
+}
+
+ALIGNED(4) static const u8 sPickupMessage[] = _("A POKéMON picked up an item!$");
+
 void FieldClearPlayerInput(struct FieldInput *input)
 {
     input->pressedAButton = FALSE;
@@ -93,6 +103,13 @@ void FieldClearPlayerInput(struct FieldInput *input)
 
 void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
 {
+    if (gShowPickupMessage) {
+        gShowPickupMessage = FALSE;
+        PlaySE(SE_SUCCESS);
+        ShowFieldMessage(sPickupMessage);
+        gHidePickupMessage = TRUE;
+    }
+
     u8 runningState = gPlayerAvatar.runningState;
     u8 tileTransitionState = gPlayerAvatar.tileTransitionState;
     bool8 forcedMove = MetatileBehavior_IsForcedMovementTile(GetPlayerCurMetatileBehavior());
@@ -283,6 +300,10 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
 
     if (input->pressedStartButton)
     {
+        if (gHidePickupMessage) {
+            HideFieldMessageBox();
+            gHidePickupMessage = FALSE;
+        }
         gFieldInputRecord.pressedStartButton = TRUE;
         FlagSet(FLAG_OPENED_START_MENU);
         PlaySE(SE_WIN_OPEN);

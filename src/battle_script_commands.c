@@ -37,6 +37,7 @@
 #include "constants/abilities.h"
 #include "constants/pokemon.h"
 #include "constants/maps.h"
+#include "field_control_avatar.h"
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 
@@ -9312,6 +9313,7 @@ static void Cmd_pickup(void)
                 if (sPickupItems[j].chance > random)
                     break;
             SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sPickupItems[j]);
+            SetPickup();
         }
     }
     gBattlescriptCurrInstr++;

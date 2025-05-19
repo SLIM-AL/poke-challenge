@@ -90,7 +90,8 @@ Other changes:
    - Smeargle -> Zubat
  - Surge's gym "puzzle" is simplified. Player always find the second switch on their first try.
  - Fishing rod hit rate is increased from 50% to 75%.
- - Soft reser has been disabled.
+ - A message is displayed when a Pokémon with the Pickup ability picks up an item. You still need to manually retrieve its item.
+ - Soft reset has been disabled.
  - Misc. bugfixes included in the https://github.com/pret/pokefirered `firered_rev1_modern` build.
 
 ## Level band / level cap

@@ -577,6 +577,7 @@ u16 SeededItemByIndex(u16 index) {
   return ITEM_HM07 + gSeededItems[index % NUM_SEEDED_ITEMS];
 }
 
+// This is only used for marts and prizes.
 static void SetMapHashAndSeedItems() {
   u32 hash;
   u16 seed1;
@@ -596,13 +597,13 @@ static void SetMapHashAndSeedItems() {
   VarSet(VAR_MAP_ITEM_1, (seed1+1) % range + ITEM_HM07);
   VarSet(VAR_MAP_ITEM_2, (seed2+2) % range + ITEM_HM07);
 
-  seed3 = SeededRandom(seed1 + seed2);
-  seed4 = SeededRandom(seed1 - seed2);
+  seed3 = SeededRandom(seed1 ^ seed2);
+  seed4 = SeededRandom(seed1 * seed2);
   VarSet(VAR_MAP_ITEM_3, (seed3+3) % range + ITEM_HM07);
   VarSet(VAR_MAP_ITEM_4, (seed4+4) % range + ITEM_HM07);
 
-  seed5 = SeededRandom(seed3 + seed4);
-  seed6 = SeededRandom(seed3 - seed4);
+  seed5 = SeededRandom(seed3 ^ seed4);
+  seed6 = SeededRandom(seed3 * seed4);
   VarSet(VAR_MAP_ITEM_5, (seed5+5) % range + ITEM_HM07);
   VarSet(VAR_MAP_ITEM_6, (seed6+6) % range + ITEM_HM07);
 }
