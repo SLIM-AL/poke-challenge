@@ -338,40 +338,60 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_ChoosePrizeItem::
 	waitmessage
 	multichoice 10, 0, MULTICHOICE_GAME_CORNER_BATTLE_ITEM_PRIZES, FALSE
 	switch VAR_RESULT
-	case 0, CeladonCity_GameCorner_PrizeRoom_EventScript_SmokeBall
-	case 1, CeladonCity_GameCorner_PrizeRoom_EventScript_MiracleSeed
-	case 2, CeladonCity_GameCorner_PrizeRoom_EventScript_Charcoal
-	case 3, CeladonCity_GameCorner_PrizeRoom_EventScript_MysticWater
-	case 4, CeladonCity_GameCorner_PrizeRoom_EventScript_YellowFlute
-	case 5, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
+	case 0, CeladonCity_GameCorner_PrizeRoom_EventScript_Toxic
+	case 1, CeladonCity_GameCorner_PrizeRoom_EventScript_Willowisp
+	case 2, CeladonCity_GameCorner_PrizeRoom_EventScript_Taunt
+	case 3, CeladonCity_GameCorner_PrizeRoom_EventScript_Hail
+	case 4, CeladonCity_GameCorner_PrizeRoom_EventScript_SunnyDay
+	case 5, CeladonCity_GameCorner_PrizeRoom_EventScript_RainDance
+	case 6, CeladonCity_GameCorner_PrizeRoom_EventScript_Sandstorm
+	case 7, CeladonCity_GameCorner_PrizeRoom_EventScript_TrickRoom
+	case 8, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	case 127, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_Toxic::
+	setvar VAR_TEMP_1, ITEM_TM006_TOXIC
+	setvar VAR_TEMP_2, 100
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end
 
-CeladonCity_GameCorner_PrizeRoom_EventScript_SmokeBall::
+CeladonCity_GameCorner_PrizeRoom_EventScript_Willowisp::
+	setvar VAR_TEMP_1, ITEM_TM061_WILL_O_WISP
+	setvar VAR_TEMP_2, 100
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_Taunt::
+	setvar VAR_TEMP_1, ITEM_TM012_TAUNT
+	setvar VAR_TEMP_2, 100
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_Hail::
 	setvar VAR_TEMP_1, ITEM_TM007_HAIL
 	setvar VAR_TEMP_2, 100
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end
 
-CeladonCity_GameCorner_PrizeRoom_EventScript_MiracleSeed::
+CeladonCity_GameCorner_PrizeRoom_EventScript_SunnyDay::
 	setvar VAR_TEMP_1, ITEM_TM011_SUNNY_DAY
 	setvar VAR_TEMP_2, 100
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end
 
-CeladonCity_GameCorner_PrizeRoom_EventScript_Charcoal::
+CeladonCity_GameCorner_PrizeRoom_EventScript_RainDance::
 	setvar VAR_TEMP_1, ITEM_TM018_RAIN_DANCE
 	setvar VAR_TEMP_2, 100
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end
 
-CeladonCity_GameCorner_PrizeRoom_EventScript_MysticWater::
+CeladonCity_GameCorner_PrizeRoom_EventScript_Sandstorm::
 	setvar VAR_TEMP_1, ITEM_TM037_SANDSTORM
 	setvar VAR_TEMP_2, 100
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end
 
-CeladonCity_GameCorner_PrizeRoom_EventScript_YellowFlute::
+CeladonCity_GameCorner_PrizeRoom_EventScript_TrickRoom::
 	setvar VAR_TEMP_1, ITEM_TM092_TRICK_ROOM
 	setvar VAR_TEMP_2, 100
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem

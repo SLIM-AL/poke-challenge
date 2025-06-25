@@ -176,12 +176,15 @@ static const struct MenuAction sMultichoiceList_GameCornerTMPrizes[] = {
 };
 
 static const struct MenuAction sMultichoiceList_GameCornerBattleItemPrizes[] = {
+    { gText_Toxic_100Coins },
+    { gText_Willowisp_100Coins },
+    { gText_Taunt_100Coins },
     { gText_SmokeBall_800Coins },
     { gText_MiracleSeed_1000Coins },
     { gText_Charcoal_1000Coins },
     { gText_MysticWater_1000Coins },
     { gText_YellowFlute_1600Coins },
-    { gText_NoThanks_2 }
+    // { gText_NoThanks_2 }  // Removed because it messes up the window.
 };
 
 static const struct MenuAction sMultichoiceList_GameCornerCoinPurchaseCounter[] = {

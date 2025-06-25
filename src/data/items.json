@@ -7867,7 +7867,7 @@
     {
       "english": "TRADE+ STONE",
       "itemId": "ITEM_TRADE_STONE",
-      "price": 3000,
+      "price": 6000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "A peculiar stone that makes\\nmany species of POKéMON\\nevolve in this challenge.",
@@ -8044,7 +8044,7 @@
     {
       "english": "HEAT ROCK",
       "itemId": "ITEM_HEAT_ROCK",
-      "price": 10000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "(!) Holder's use of Sunny Day\\nlasts 8 turns instead of 5.",
@@ -8060,7 +8060,7 @@
     {
       "english": "ICY ROCK",
       "itemId": "ITEM_ICY_ROCK",
-      "price": 10000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "(!) Holder's use of Hail\\nlasts 8 turns instead of 5.",
@@ -8076,7 +8076,7 @@
     {
       "english": "SMOOTH ROCK",
       "itemId": "ITEM_SMOOTH_ROCK",
-      "price": 10000,
+      "price": 5000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
       "description_english": "(!) Holder's use of Sandstorm\\nlasts 8 turns instead of 5.",

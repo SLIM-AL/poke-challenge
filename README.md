@@ -48,20 +48,22 @@ Other changes:
  - The Karate Master gives the player a MACHO BRACE.
  - Choice Specs and Choice Scarf are implemented properly. Other Gen IV items are not.
  - Physical/special split.
- - Dragonair, Pupitar, and Shelgon evolve at level 50.
+ - Dragonair and Pupitar evolve at level 50.
  - Gift Pokémon are replaced with Spinda.
  - Items aren't sellable.
  - HMs are deletable without the Move Deleter.
  - Flash is no longer required in Rock Tunnel.
  - Old Amber is removed from the game.
- - Trade and happiness evolutions have been replaced with a new "Trade+ Stone", or Sun Stone & Moon Stone in cases where one Pokémon can evolve into multiple others (e.g. Eevee into Espeon or Umbreon). See full list [here](https://github.com/slim-al/poke-challenge/blob/master/src/data/pokemon/evolution.h).
+ - Trade and non-baby happiness evolutions have been replaced with a new "Trade+ Stone", or Sun Stone & Moon Stone in cases where one Pokémon can evolve into multiple others (e.g. Eevee into Espeon or Umbreon). See full list [here](https://github.com/slim-al/poke-challenge/blob/master/src/data/pokemon/evolution.h).
+ - Babies that evolve via happiness now evolve at level 20.
+ - Porygon evolves at level 30.
  - Tyrogue can evolve using Sun Stone (Hitmonchan), Moon Stone (Hitmonlee), and Trade+ Stone (Hitmontop) in addition to his normal level 20 evolution. You can avoid evolving by pressing B if you want to wait to use a stone.
  - Pokémon that evolve by knowing a move (e.g. Ancient Power) instead evovle at the first level that they can know the move.
  - Player finds the Good Rod where the Old Rod used to be, and Super Rod where Good Rod used to be. The Super Rod can also still be found at its original location.
  - The PC is accessible from the START menu. Pokémon no longer heal when sent to the PC.
  - Start with a coin case containing 100 coins. Can no longer buy coins at the Game Corner. Earn 50 pity coins when you run out of coins at the slot machines.
  - The following prizes can be won at the Game Corner:
-    - 100 Coins each: TMs for weather moves and Trick Room.
+    - 100 Coins each: TMs for Toxic, Will o Wisp, Taunt, Hail, Sandstorm, Rain Dance, Sunny Day, and Trick Room.
     - 150 Coins each: 6 random TMs, chosen based on the game seed.
     - 150 Coins: Level 1 Pikachu that knows Surf and Fly.
     - 150 Coins: Replacement Smeargle.
