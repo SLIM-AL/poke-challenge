@@ -5293,7 +5293,7 @@
       "price": 3000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "The user begins moving so quickly\\nthat it creates illusory copies to\\nraise its evasiveness.",
+      "description_english": "The user scatters bursts of\\nspores that induce sleep.",
       "importance": 0,
       "registrability": 0,
       "pocket": "POCKET_TM_CASE",
@@ -5302,7 +5302,7 @@
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0,
-      "moveId": "DoubleTeam"
+      "moveId": "Spore"
     },
     {
       "english": "TM33",
