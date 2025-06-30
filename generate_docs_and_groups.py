@@ -263,8 +263,8 @@ pokes = [
   ('CLEFFA', 'EarlyBoost'),
   ('IGGLYBUFF', 'EarlyBoost'),
 
-  ('TOGEPI', 'Urban1'),
-  ('TOGETIC', 'Urban2'),
+  ('TOGEPI', 'Urban2'),
+  ('TOGETIC', 'CeruleanCave'),
 
   ('NATU', 'NormalFlying1'),
   ('XATU', 'NormalFlying2'),
@@ -487,8 +487,8 @@ pokes = [
 
   ('ROSELIA', 'GrassBug2'),
 
-  ('GULPIN', 'Overworld1'),
-  ('SWALOT', 'Overworld2'),
+  ('GULPIN', 'Urban1'),
+  ('SWALOT', 'Urban2'),
 
   ('CARVANHA', 'WaterIce1'),
   ('SHARPEDO', 'WaterIce2'),

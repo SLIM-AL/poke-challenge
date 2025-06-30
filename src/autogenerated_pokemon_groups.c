@@ -234,6 +234,7 @@ const u16 gGroup_Urban1[] =
 {
   /*SIZE=*/16,
   SPECIES_PLUSLE,
+  SPECIES_GULPIN,
   SPECIES_MAGNEMITE,
   SPECIES_GRIMER,
   SPECIES_SLUGMA,
@@ -246,14 +247,14 @@ const u16 gGroup_Urban1[] =
   SPECIES_MAGMAR,
   SPECIES_DITTO,
   SPECIES_EEVEE,
-  SPECIES_TOGEPI,
   SPECIES_PORYGON,
   SPECIES_BELDUM,
 };
 
 const u16 gGroup_Urban2[] =
 {
-  /*SIZE=*/11,
+  /*SIZE=*/12,
+  SPECIES_SWALOT,
   SPECIES_MAGNETON,
   SPECIES_MUK,
   SPECIES_ELECTRODE,
@@ -263,7 +264,7 @@ const u16 gGroup_Urban2[] =
   SPECIES_MAGMORTAR,
   SPECIES_PORYGON2,
   SPECIES_JOLTEON,
-  SPECIES_TOGETIC,
+  SPECIES_TOGEPI,
   SPECIES_FLAREON,
 };
 
@@ -339,7 +340,7 @@ const u16 gGroup_WaterIce2[] =
 
 const u16 gGroup_Overworld1[] =
 {
-  /*SIZE=*/35,
+  /*SIZE=*/34,
   SPECIES_EKANS,
   SPECIES_PIKACHU,
   SPECIES_SANDSHREW,
@@ -355,7 +356,6 @@ const u16 gGroup_Overworld1[] =
   SPECIES_MANKEY,
   SPECIES_GROWLITHE,
   SPECIES_ELECTRIKE,
-  SPECIES_GULPIN,
   SPECIES_PONYTA,
   SPECIES_GIRAFARIG,
   SPECIES_NUMEL,
@@ -379,7 +379,7 @@ const u16 gGroup_Overworld1[] =
 
 const u16 gGroup_Overworld2[] =
 {
-  /*SIZE=*/47,
+  /*SIZE=*/46,
   SPECIES_PIDGEOT,
   SPECIES_LUDICOLO,
   SPECIES_ARBOK,
@@ -409,7 +409,6 @@ const u16 gGroup_Overworld2[] =
   SPECIES_MANECTRIC,
   SPECIES_VICTREEBEL,
   SPECIES_SLOWKING,
-  SPECIES_SWALOT,
   SPECIES_RAPIDASH,
   SPECIES_CAMERUPT,
   SPECIES_TORKOAL,
@@ -431,9 +430,10 @@ const u16 gGroup_Overworld2[] =
 
 const u16 gGroup_CeruleanCave[] =
 {
-  /*SIZE=*/5,
+  /*SIZE=*/6,
   SPECIES_VIBRAVA,
   SPECIES_SHELGON,
+  SPECIES_TOGETIC,
   SPECIES_METANG,
   SPECIES_PUPITAR,
   SPECIES_DRAGONAIR,
@@ -756,9 +756,9 @@ const u16* const gMonGroups[] =
   [SPECIES_MURKROW] = gGroup_Spooky1,
   [SPECIES_ROSELIA] = gGroup_GrassBug2,
   [SPECIES_SLOWKING] = gGroup_Overworld2,
-  [SPECIES_GULPIN] = gGroup_Overworld1,
+  [SPECIES_GULPIN] = gGroup_Urban1,
   [SPECIES_TENTACRUEL] = gGroup_WaterIce2,
-  [SPECIES_SWALOT] = gGroup_Overworld2,
+  [SPECIES_SWALOT] = gGroup_Urban2,
   [SPECIES_GEODUDE] = gGroup_Cave1,
   [SPECIES_MISDREAVUS] = gGroup_Spooky1,
   [SPECIES_MIME_JR] = gGroup_EarlyBoost,
@@ -963,8 +963,8 @@ const u16* const gMonGroups[] =
   [SPECIES_GASTLY] = gGroup_Spooky1,
   [SPECIES_STARMIE] = gGroup_WaterIce2,
   [SPECIES_CLEFFA] = gGroup_EarlyBoost,
-  [SPECIES_TOGEPI] = gGroup_Urban1,
-  [SPECIES_TOGETIC] = gGroup_Urban2,
+  [SPECIES_TOGEPI] = gGroup_Urban2,
+  [SPECIES_TOGETIC] = gGroup_CeruleanCave,
   [SPECIES_GLIGAR] = gGroup_Cave1,
   [SPECIES_SNEASEL] = gGroup_Cave1,
   [SPECIES_TRAPINCH] = gGroup_Overworld1,
