@@ -53,7 +53,7 @@ u32 GameHash() {
   if (gGameHash == 0) {
     gGameHash = HashStr(gSaveBlock1Ptr->rivalName);
   }
-  const int version = 3;
+  const u32 version = 4;
   return (gGameHash << version) | (gGameHash >> (32 - version));
 }
 
